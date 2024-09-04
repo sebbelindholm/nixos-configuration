@@ -13,5 +13,7 @@
     impatience
     gnome-40-ui-improvements
     tiling-shell
+        hibernate-status-button
+        prime-helper
   ];   
 }

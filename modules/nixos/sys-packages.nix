@@ -13,6 +13,8 @@ in
   config = lib.mkIf syspkg.enable {
     environment.systemPackages = with pkgs; [
         wget
+        nvtopPackages.full
+        btop
         zip
         unzip
         git

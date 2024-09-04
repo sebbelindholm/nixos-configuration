@@ -31,5 +31,6 @@ in
                 };
         };
         powerManagement.powertop.enable = true;
+
   };
 }

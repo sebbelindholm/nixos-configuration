@@ -39,8 +39,12 @@
     userName = "sebastian";
   };
 
+    users.users."sebastian" = { extraGroups = [ "openrazer" ]; };
+
+
   environment.systemPackages = with pkgs; [
-    #SOME PROGRAM SPECIFIC TO THIS MACHINE
+        openrazer-daemon
+        polychromatic
   ];
 
   system.stateVersion = "24.05";
