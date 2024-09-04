@@ -18,7 +18,7 @@ in
         dconf2nix
         blackbox-terminal
         spotify
-        
+        gnome.gnome-tweaks
     ];
   };
 }

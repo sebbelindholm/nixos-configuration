@@ -11,6 +11,7 @@
     [
       ./hardware-configuration.nix
       ../../modules/nixos
+
       inputs.home-manager.nixosModules.default {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
@@ -23,6 +24,7 @@
   std-sound.enable = true;
   xserver-module.enable = true;
   locale.enable = true;
+  ssh.enable = false;
   network.enable = true;
   boot.enable = true;
   font.enable = true;

@@ -12,6 +12,8 @@ with lib.hm.gvariant;
       font = "JetBrainsMono Nerd Font 14";
       notify-process-completion = false;
       show-headerbar = false;
+      window-height = mkUint32 1376;
+      window-width = mkUint32 3414;
     };
 
     "org/gnome/Console" = {
@@ -20,6 +22,11 @@ with lib.hm.gvariant;
       last-window-maximised = false;
       last-window-size = mkTuple [ 972 672 ];
       use-system-font = false;
+    };
+
+    "org/gnome/Extensions" = {
+      window-height = 1048;
+      window-width = 1900;
     };
 
     "org/gnome/Geary" = {
@@ -71,6 +78,7 @@ with lib.hm.gvariant;
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
       enable-animations = true;
+      font-antialiasing = "rgba";
       toolkit-accessibility = false;
     };
 
@@ -82,13 +90,21 @@ with lib.hm.gvariant;
       application-id = "gnome-power-panel.desktop";
     };
 
+    "org/gnome/desktop/notifications/application/google-chrome" = {
+      application-id = "google-chrome.desktop";
+    };
+
     "org/gnome/desktop/notifications/application/org-gnome-console" = {
       application-id = "org.gnome.Console.desktop";
     };
 
+    "org/gnome/desktop/notifications/application/vesktop" = {
+      application-id = "vesktop.desktop";
+    };
+
     "org/gnome/desktop/peripherals/mouse" = {
       accel-profile = "flat";
-      speed = 0.2684824902723735;
+      speed = 0.268482;
     };
 
     "org/gnome/desktop/peripherals/touchpad" = {
@@ -105,11 +121,13 @@ with lib.hm.gvariant;
 
     "org/gnome/desktop/wm/keybindings" = {
       activate-window-menu = [];
+      close = [ "<Super>q" ];
       maximize = [];
       move-to-workspace-1 = [ "<Shift><Super>1" ];
       move-to-workspace-2 = [ "<Shift><Super>2" ];
       move-to-workspace-3 = [ "<Shift><Super>3" ];
       move-to-workspace-4 = [ "<Shift><Super>4" ];
+      show-desktop = [ "<Super>d" ];
       switch-applications = [];
       switch-applications-backward = [];
       switch-to-workspace-1 = [ "<Super>1" ];
@@ -118,7 +136,15 @@ with lib.hm.gvariant;
       switch-to-workspace-4 = [ "<Super>4" ];
       switch-windows = [ "<Alt>Tab" ];
       switch-windows-backward = [ "<Shift><Alt>Tab" ];
+      toggle-fullscreen = [ "<Super>f" ];
+      toggle-maximized = [ "<Shift><Super>f" ];
       unmaximize = [];
+    };
+
+    "org/gnome/desktop/wm/preferences" = {
+      button-layout = "appmenu:minimize,maximize,close";
+      focus-mode = "sloppy";
+      resize-with-right-button = true;
     };
 
     "org/gnome/epiphany" = {
@@ -135,6 +161,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/mutter" = {
+      center-new-windows = true;
       dynamic-workspaces = true;
       edge-tiling = false;
       overlay-key = "Super_L";
@@ -147,7 +174,13 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/nautilus/preferences" = {
+      default-folder-viewer = "icon-view";
       migrated-gtk-settings = true;
+      search-filter-time-type = "last_modified";
+    };
+
+    "org/gnome/nautilus/window-state" = {
+      initial-size = mkTuple [ 890 550 ];
     };
 
     "org/gnome/settings-daemon/plugins/media-keys" = {
@@ -161,6 +194,8 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell" = {
+      command-history = [ "neofetch" "ls" ];
+      disable-user-extensions = false;
       disabled-extensions = [ "places-menu@gnome-shell-extensions.gcampax.github.com" "window-list@gnome-shell-extensions.gcampax.github.com" ];
       enabled-extensions = [ "arcmenu@arcmenu.com" "auto-move-windows@gnome-shell-extensions.gcampax.github.com" "caffeine@patapon.info" "dash-to-panel@jderose9.github.com" "gnome-ui-tune@itstime.tech" "impatience@gfxmonk.net" "just-perfection-desktop@just-perfection" "launch-new-instance@gnome-shell-extensions.gcampax.github.com" "native-window-placement@gnome-shell-extensions.gcampax.github.com" "tilingshell@ferrarodomenico.com" "trayIconsReloaded@selfmade.pl" "user-theme@gnome-shell-extensions.gcampax.github.com" "blur-my-shell@aunetx" ];
       favorite-apps = [ "org.gnome.Nautilus.desktop" "google-chrome.desktop" "com.raggesilver.BlackBox.desktop" "code.desktop" "org.gnome.Settings.desktop" ];
@@ -169,7 +204,32 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/arcmenu" = {
+      arc-menu-icon = 0;
+      custom-menu-button-icon-size = 30.0;
+      distro-icon = 22;
+      hide-overview-on-startup = true;
+      menu-background-color = "rgba(28,28,28,0.98)";
+      menu-border-color = "rgb(63,62,64)";
+      menu-button-appearance = "Icon";
+      menu-button-icon = "Distro_Icon";
+      menu-foreground-color = "rgb(211,218,227)";
+      menu-item-active-bg-color = "rgba(228,228,226,0.15)";
+      menu-item-active-fg-color = "rgb(255,255,255)";
+      menu-item-hover-bg-color = "rgba(238,238,236,0.08)";
+      menu-item-hover-fg-color = "rgb(255,255,255)";
+      menu-layout = "Windows";
+      menu-separator-color = "rgb(63,62,64)";
+      override-menu-theme = false;
+      pinned-apps = [ {
+        id = "org.gnome.Nautilus.desktop";
+      } {
+        id = "gnome-extensions prefs arcmenu@arcmenu.com";
+        name = "ArcMenu Settings";
+        icon = "ArcMenu_ArcMenuIcon";
+      } ];
+      prefs-visible-page = 0;
       recently-installed-apps = [];
+      search-entry-border-radius = mkTuple [ true 25 ];
     };
 
     "org/gnome/shell/extensions/blur-my-shell" = {
@@ -218,8 +278,57 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/dash-to-panel" = {
+      animate-appicon-hover-animation-extent = {
+        RIPPLE = 4;
+        PLANK = 4;
+        SIMPLE = 1;
+      };
+      appicon-margin = 8;
+      appicon-padding = 4;
       available-monitors = [ 0 1 ];
+      dot-position = "BOTTOM";
+      hotkeys-overlay-combo = "TEMPORARILY";
+      leftbox-padding = -1;
+      multi-monitors = false;
+      panel-anchors = ''
+        {"0":"MIDDLE","1":"MIDDLE"}
+      '';
+      panel-lengths = ''
+        {"0":100,"1":100}
+      '';
+      panel-sizes = ''
+        {"0":40,"1":40}
+      '';
       primary-monitor = 0;
+      status-icon-padding = -1;
+      tray-padding = -1;
+      window-preview-title-position = "TOP";
+    };
+
+    "org/gnome/shell/extensions/just-perfection" = {
+      accessibility-menu = true;
+      background-menu = true;
+      controls-manager-spacing-size = 0;
+      dash = true;
+      dash-icon-size = 0;
+      double-super-to-appgrid = true;
+      max-displayed-search-results = 0;
+      osd = true;
+      panel = true;
+      panel-in-overview = true;
+      ripple-box = true;
+      search = true;
+      show-apps-button = true;
+      startup-status = 1;
+      theme = false;
+      window-demands-attention-focus = false;
+      window-picker-icon = true;
+      window-preview-caption = true;
+      window-preview-close-button = true;
+      workspace = true;
+      workspace-background-corner-size = 0;
+      workspace-popup = true;
+      workspaces-in-app-grid = true;
     };
 
     "org/gnome/shell/extensions/tilingshell" = {
@@ -227,6 +336,7 @@ with lib.hm.gvariant;
       layouts-json = "[{\"id\":\"Layout 1\",\"tiles\":[{\"x\":0,\"y\":0,\"width\":0.22,\"height\":0.5,\"groups\":[1,2]},{\"x\":0,\"y\":0.5,\"width\":0.22,\"height\":0.5,\"groups\":[1,2]},{\"x\":0.22,\"y\":0,\"width\":0.56,\"height\":1,\"groups\":[2,3]},{\"x\":0.78,\"y\":0,\"width\":0.22,\"height\":0.5,\"groups\":[3,4]},{\"x\":0.78,\"y\":0.5,\"width\":0.22,\"height\":0.5,\"groups\":[3,4]}]},{\"id\":\"Layout 2\",\"tiles\":[{\"x\":0,\"y\":0,\"width\":0.22,\"height\":1,\"groups\":[1]},{\"x\":0.22,\"y\":0,\"width\":0.56,\"height\":1,\"groups\":[1,2]},{\"x\":0.78,\"y\":0,\"width\":0.22,\"height\":1,\"groups\":[2]}]},{\"id\":\"Layout 3\",\"tiles\":[{\"x\":0,\"y\":0,\"width\":0.33,\"height\":1,\"groups\":[1]},{\"x\":0.33,\"y\":0,\"width\":0.67,\"height\":1,\"groups\":[1]}]},{\"id\":\"Layout 4\",\"tiles\":[{\"x\":0,\"y\":0,\"width\":0.67,\"height\":1,\"groups\":[1]},{\"x\":0.67,\"y\":0,\"width\":0.33,\"height\":1,\"groups\":[1]}]}]";
       overridden-settings = "{\"org.gnome.mutter.keybindings\":{\"toggle-tiled-right\":\"['<Super>Right']\",\"toggle-tiled-left\":\"['<Super>Left']\"},\"org.gnome.desktop.wm.keybindings\":{\"maximize\":\"['<Super>Up']\",\"unmaximize\":\"['<Super>Down', '<Alt>F5']\"},\"org.gnome.mutter\":{\"edge-tiling\":\"false\"}}";
       selected-layouts = [ "Layout 4" "Layout 1" ];
+      top-edge-maximize = true;
     };
 
     "org/gnome/shell/keybindings" = {
@@ -240,6 +350,10 @@ with lib.hm.gvariant;
 
     "org/gnome/shell/world-clocks" = {
       locations = [];
+    };
+
+    "org/gnome/tweaks" = {
+      show-extensions-notice = false;
     };
 
     "org/gtk/gtk4/settings/file-chooser" = {

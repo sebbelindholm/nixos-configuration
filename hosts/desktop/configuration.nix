@@ -11,9 +11,6 @@
     [
       ./hardware-configuration.nix
       ../../modules/nixos
-      ../../modules/nixvim
-
-      inputs.nixvim.nixosModules.nixvim
 
       inputs.home-manager.nixosModules.default {
         home-manager.useGlobalPkgs = true;
@@ -34,8 +31,6 @@
   font.enable = true;
   std-nix.enable = true;
   bluetooth.enable = true;
-
-  nixvim.enable = false;
 
   main-user = {
     enable = true;

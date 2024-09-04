@@ -34,6 +34,6 @@
         nvim-colorizer-lua
         fidget-nvim
         numb-nvim
-        gruvbox-nvim
+        onedark-nvim
     ];
 }
