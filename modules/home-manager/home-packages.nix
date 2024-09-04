@@ -12,6 +12,7 @@ in
   config = lib.mkIf cfg.enable {
     home.packages = with pkgs; [
         vesktop
+            lazygit
         google-chrome
         vscode
         bitwarden-desktop
