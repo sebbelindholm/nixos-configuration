@@ -36,6 +36,8 @@
     nvidia.enable = false;
     steam.enable = true;
 
+    services.razer-laptop-control.enable = false;
+
   main-user = {
     enable = true;
     userName = "sebastian";
