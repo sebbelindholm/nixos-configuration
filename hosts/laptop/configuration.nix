@@ -12,6 +12,8 @@
       ./hardware-configuration.nix
       ../../modules/nixos
 
+        inputs.razerdaemon.nixosModules.default
+
       inputs.home-manager.nixosModules.default {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;

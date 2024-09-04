@@ -9,6 +9,8 @@
         inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    razerdaemon.url = "github:Razer-Linux/razer-laptop-control-no-dkms";
+
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {
