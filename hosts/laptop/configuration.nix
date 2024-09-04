@@ -30,6 +30,9 @@
   font.enable = true;
   std-nix.enable = true;
   bluetooth.enable = true;
+    laptop.enable = true;
+    nvidia.enable = false;
+    steam.enable = true;
 
   main-user = {
     enable = true;

@@ -14,7 +14,7 @@
   outputs = { self, nixpkgs, ... }@inputs: {
 
     nixosConfigurations = {
-      desktop = nixpkgs.lib.nixosSystem {
+      nixos-desktop = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = [
           ./hosts/desktop/configuration.nix
@@ -22,7 +22,7 @@
       };
     };
 
-      laptop =
+      nixos-laptop =
         nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [

@@ -17,5 +17,6 @@
         ./nvidia.nix
         ./igpu-intel.nix
         ./steam.nix
+        ./laptop.nix
     ];
 }
