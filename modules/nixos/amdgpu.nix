@@ -21,6 +21,9 @@ in
         rocmPackages.clr.icd
         clinfo
     ];
+    hardware.graphics = {
+        enable = true;
+    };
 
     hardware.amdgpu.amdvlk.support32Bit.enable = true;
 

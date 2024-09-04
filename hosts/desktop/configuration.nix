@@ -31,6 +31,7 @@
   font.enable = true;
   std-nix.enable = true;
   bluetooth.enable = true;
+    steam.enable = true;
 
   main-user = {
     enable = true;

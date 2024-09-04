@@ -220,13 +220,6 @@ with lib.hm.gvariant;
       menu-layout = "Windows";
       menu-separator-color = "rgb(63,62,64)";
       override-menu-theme = false;
-      pinned-apps = [ {
-        id = "org.gnome.Nautilus.desktop";
-      } {
-        id = "gnome-extensions prefs arcmenu@arcmenu.com";
-        name = "ArcMenu Settings";
-        icon = "ArcMenu_ArcMenuIcon";
-      } ];
       prefs-visible-page = 0;
       recently-installed-apps = [];
       search-entry-border-radius = mkTuple [ true 25 ];
@@ -278,11 +271,6 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/dash-to-panel" = {
-      animate-appicon-hover-animation-extent = {
-        RIPPLE = 4;
-        PLANK = 4;
-        SIMPLE = 1;
-      };
       appicon-margin = 8;
       appicon-padding = 4;
       available-monitors = [ 0 1 ];

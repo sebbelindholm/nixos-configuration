@@ -17,6 +17,10 @@
     { device = "/dev/disk/by-uuid/dfb68975-dc90-4770-a493-a5b8333d5a15";
       fsType = "ext4";
     };
+    fileSystems."/home/sebastian/Drives/nvme" =
+        { device = "/dev/disk/by-uuid/4b533251-2d67-4097-a786-084b6674f673";
+        fsType = "ext4";
+        };
 
   fileSystems."/boot" =
     { device = "/dev/disk/by-uuid/C65E-C0C2";

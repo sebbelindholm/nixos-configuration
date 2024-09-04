@@ -14,5 +14,8 @@
       ./std-nix.nix
       ./bluetooth.nix
       ./amdgpu.nix
+        ./nvidia.nix
+        ./igpu-intel.nix
+        ./steam.nix
     ];
 }
