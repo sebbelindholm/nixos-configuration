@@ -20,7 +20,6 @@
           ./hosts/desktop/configuration.nix
         ];
       };
-    };
 
       nixos-laptop =
         nixpkgs.lib.nixosSystem {
@@ -29,6 +28,6 @@
           ./hosts/laptop/configuration.nix
         ];
       };
-
+    };
   };
 }
