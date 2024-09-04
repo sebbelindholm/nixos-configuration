@@ -1,0 +1,19 @@
+{ lib, config, pkgs, ... }:
+
+{
+    programs = {
+        nixvim = {
+            plugins = {
+                
+            };
+        };
+    };
+}
+
+
+{
+    mode = "n";
+    key = "<leader>";
+    action = "<CMD><CR>";
+    options.desc = "";
+}
