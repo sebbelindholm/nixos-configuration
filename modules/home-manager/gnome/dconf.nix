@@ -199,7 +199,6 @@ with lib.hm.gvariant;
       disabled-extensions = [ "places-menu@gnome-shell-extensions.gcampax.github.com" "window-list@gnome-shell-extensions.gcampax.github.com" ];
       enabled-extensions = [ "arcmenu@arcmenu.com" "auto-move-windows@gnome-shell-extensions.gcampax.github.com" "caffeine@patapon.info" "dash-to-panel@jderose9.github.com" "gnome-ui-tune@itstime.tech" "impatience@gfxmonk.net" "just-perfection-desktop@just-perfection" "launch-new-instance@gnome-shell-extensions.gcampax.github.com" "native-window-placement@gnome-shell-extensions.gcampax.github.com" "tilingshell@ferrarodomenico.com" "trayIconsReloaded@selfmade.pl" "user-theme@gnome-shell-extensions.gcampax.github.com" "blur-my-shell@aunetx" ];
       favorite-apps = [ "org.gnome.Nautilus.desktop" "google-chrome.desktop" "com.raggesilver.BlackBox.desktop" "code.desktop" "org.gnome.Settings.desktop" ];
-      last-selected-power-profile = "performance";
       welcome-dialog-last-shown-version = "46.2";
     };
 
