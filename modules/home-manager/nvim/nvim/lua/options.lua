@@ -35,8 +35,6 @@ vim.keymap.set("n", "<C-j>", "<C-W>j")
 vim.keymap.set("n", "<C-k>", "<C-W>k")
 vim.keymap.set("n", "<C-l>", "<C-W>l")
 
-vim.keymap.set("n", "<leader>gg", "<CMD>LazyGit<CR>", { desc = "Open LazyGit" })
-
 vim.schedule(function()
 	vim.opt.clipboard = "unnamedplus"
 end)
@@ -52,3 +50,4 @@ function _G.set_terminal_keymap()
 end
 
 vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymap()")
+

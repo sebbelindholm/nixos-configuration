@@ -13,6 +13,7 @@ in
     home.packages = with pkgs; [
             kitty
         vesktop
+            lazygit
         google-chrome
         vscode
         bitwarden-desktop
