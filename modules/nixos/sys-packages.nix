@@ -13,15 +13,20 @@ in
   config = lib.mkIf syspkg.enable {
     environment.systemPackages = with pkgs; [
         wget
+            nodejs
         nvtopPackages.full
         btop
+            vulkan-tools
+            glxinfo
         zip
         unzip
+            powertop
         git
         stow
         gcc
         ripgrep
         vim
+            prettierd
         libclang
         clang-tools
         llvmPackages_19.clang-unwrapped
@@ -39,6 +44,8 @@ in
         gnumake
         cmake
         sumneko-lua-language-server
+            javascript-typescript-langserver
+            typescript
         rust-analyzer
         pyright
         nixd

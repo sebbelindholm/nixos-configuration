@@ -16,6 +16,8 @@ in
     
     services.xserver.videoDrivers = ["nvidia"];
 
+    hardware.graphics.enable32Bit = true;
+
     hardware.nvidia = {
         modesetting.enable = true;
         powerManagement = {
@@ -29,13 +31,12 @@ in
 
         prime = {
                 intelBusId = "PCI:00:02:0";
-                nvidiaBusId = "PCI:01:00:0";
+                nvidiaBusId = "PCI:1:00:0";
                 offload = {
                     enable = true;
                     enableOffloadCmd = true;
                 };
             };
     };
-
   };
 }

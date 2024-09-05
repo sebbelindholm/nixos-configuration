@@ -22,6 +22,7 @@ in
                 nixos-build = "sudo nixos-rebuild switch --flake ~/.setup#";
                 nixos-clean = "sudo nix-collect-garbage -d; nix-collect-garbage -d";
             };
+                initExtra = "export PATH=/home/sebastian/.setup/modules/home-manager/scripts:$PATH";
         };
 
         starship = {

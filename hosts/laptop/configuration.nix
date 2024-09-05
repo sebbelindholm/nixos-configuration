@@ -33,7 +33,7 @@
   std-nix.enable = true;
   bluetooth.enable = true;
     laptop.enable = true;
-    nvidia.enable = false;
+    nvidia.enable = true;
     steam.enable = true;
 
     services.razer-laptop-control.enable = false;

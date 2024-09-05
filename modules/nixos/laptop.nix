@@ -10,8 +10,9 @@ in
   };
 
   config = lib.mkIf cfg.enable {
+        services.power-profiles-daemon.enable = false;
         services.tlp = {
-            enable = false;
+            enable = true;
                 settings = {
                     CPU_SCALING_GOVERNOR_ON_AC = "performance";
                     CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
@@ -30,7 +31,8 @@ in
 
                 };
         };
-        powerManagement.powertop.enable = true;
+        powerManagement.powertop.enable = false;
+        powerManagement.enable = true;
 
   };
 }

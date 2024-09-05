@@ -13,6 +13,7 @@
   git.enable = true;
   gnome.enable = true;
   nvim.enable = true;
+    kitty.enable = true;
 
   home.packages = [
     #SOME HOME PACKAGES SPECIFIC TO THIS MACHINE

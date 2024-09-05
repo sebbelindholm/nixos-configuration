@@ -183,13 +183,18 @@ with lib.hm.gvariant;
       initial-size = mkTuple [ 890 550 ];
     };
 
+    "org/gnome/nm-applet/eap/08248533-11a6-4d73-adf7-423a42cd1b7a" = {
+      ignore-ca-cert = false;
+      ignore-phase2-ca-cert = false;
+    };
+
     "org/gnome/settings-daemon/plugins/media-keys" = {
       custom-keybindings = [ "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/" ];
     };
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
       binding = "<Super>Return";
-      command = "blackbox-terminal";
+      command = "kitty";
       name = "terminal";
     };
 
@@ -198,7 +203,8 @@ with lib.hm.gvariant;
       disable-user-extensions = false;
       disabled-extensions = [ "places-menu@gnome-shell-extensions.gcampax.github.com" "window-list@gnome-shell-extensions.gcampax.github.com" ];
       enabled-extensions = [ "arcmenu@arcmenu.com" "auto-move-windows@gnome-shell-extensions.gcampax.github.com" "caffeine@patapon.info" "dash-to-panel@jderose9.github.com" "gnome-ui-tune@itstime.tech" "impatience@gfxmonk.net" "just-perfection-desktop@just-perfection" "launch-new-instance@gnome-shell-extensions.gcampax.github.com" "native-window-placement@gnome-shell-extensions.gcampax.github.com" "tilingshell@ferrarodomenico.com" "trayIconsReloaded@selfmade.pl" "user-theme@gnome-shell-extensions.gcampax.github.com" "blur-my-shell@aunetx" ];
-      favorite-apps = [ "org.gnome.Nautilus.desktop" "google-chrome.desktop" "com.raggesilver.BlackBox.desktop" "code.desktop" "org.gnome.Settings.desktop" ];
+      favorite-apps = [ "org.gnome.Nautilus.desktop" "google-chrome.desktop" "org.gnome.Settings.desktop" "kitty.desktop" "spotify.desktop" "steam.desktop" "vesktop.desktop" ];
+      last-selected-power-profile = "power-saver";
       welcome-dialog-last-shown-version = "46.2";
     };
 
@@ -272,19 +278,19 @@ with lib.hm.gvariant;
     "org/gnome/shell/extensions/dash-to-panel" = {
       appicon-margin = 8;
       appicon-padding = 4;
-      available-monitors = [ 0 1 ];
+      available-monitors = [ 0 ];
       dot-position = "BOTTOM";
       hotkeys-overlay-combo = "TEMPORARILY";
       leftbox-padding = -1;
       multi-monitors = false;
       panel-anchors = ''
-        {"0":"MIDDLE","1":"MIDDLE"}
+        {"0":"MIDDLE","1":"MIDDLE"}\n
       '';
       panel-lengths = ''
-        {"0":100,"1":100}
+        {"0":100,"1":100}\n
       '';
       panel-sizes = ''
-        {"0":40,"1":40}
+        {"0":40,"1":40}\n
       '';
       primary-monitor = 0;
       status-icon-padding = -1;
@@ -322,7 +328,7 @@ with lib.hm.gvariant;
       last-version-name-installed = "11.1";
       layouts-json = "[{\"id\":\"Layout 1\",\"tiles\":[{\"x\":0,\"y\":0,\"width\":0.22,\"height\":0.5,\"groups\":[1,2]},{\"x\":0,\"y\":0.5,\"width\":0.22,\"height\":0.5,\"groups\":[1,2]},{\"x\":0.22,\"y\":0,\"width\":0.56,\"height\":1,\"groups\":[2,3]},{\"x\":0.78,\"y\":0,\"width\":0.22,\"height\":0.5,\"groups\":[3,4]},{\"x\":0.78,\"y\":0.5,\"width\":0.22,\"height\":0.5,\"groups\":[3,4]}]},{\"id\":\"Layout 2\",\"tiles\":[{\"x\":0,\"y\":0,\"width\":0.22,\"height\":1,\"groups\":[1]},{\"x\":0.22,\"y\":0,\"width\":0.56,\"height\":1,\"groups\":[1,2]},{\"x\":0.78,\"y\":0,\"width\":0.22,\"height\":1,\"groups\":[2]}]},{\"id\":\"Layout 3\",\"tiles\":[{\"x\":0,\"y\":0,\"width\":0.33,\"height\":1,\"groups\":[1]},{\"x\":0.33,\"y\":0,\"width\":0.67,\"height\":1,\"groups\":[1]}]},{\"id\":\"Layout 4\",\"tiles\":[{\"x\":0,\"y\":0,\"width\":0.67,\"height\":1,\"groups\":[1]},{\"x\":0.67,\"y\":0,\"width\":0.33,\"height\":1,\"groups\":[1]}]}]";
       overridden-settings = "{\"org.gnome.mutter.keybindings\":{\"toggle-tiled-right\":\"['<Super>Right']\",\"toggle-tiled-left\":\"['<Super>Left']\"},\"org.gnome.desktop.wm.keybindings\":{\"maximize\":\"['<Super>Up']\",\"unmaximize\":\"['<Super>Down', '<Alt>F5']\"},\"org.gnome.mutter\":{\"edge-tiling\":\"false\"}}";
-      selected-layouts = [ "Layout 4" "Layout 1" ];
+      selected-layouts = [ "Layout 4" ];
       top-edge-maximize = true;
     };
 

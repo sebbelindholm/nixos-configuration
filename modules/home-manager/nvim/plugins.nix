@@ -35,5 +35,6 @@
         fidget-nvim
         numb-nvim
         onedark-nvim
+        tokyonight-nvim
     ];
 }
