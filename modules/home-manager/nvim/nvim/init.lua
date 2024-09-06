@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 vim.o.expandtab = true
-vim.o.tabstop = 4
-vim.o.softtabstop = 4
+vim.o.tabstop = 2
+vim.o.softtabstop = 2
 vim.o.number = true
 vim.o.relativenumber = true
 vim.o.signcolumn = "number"
@@ -16,7 +16,7 @@ vim.o.splitright = true
 vim.o.splitbelow = true
 vim.o.scrolloff = 10
 vim.o.conceallevel = 3
-vim.o.shiftwidth = 4
+vim.o.shiftwidth = 2
 
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.keymap.set("n", "<leader>vv", ":vsplit<CR>", { silent = true, desc = "Split vertical" })

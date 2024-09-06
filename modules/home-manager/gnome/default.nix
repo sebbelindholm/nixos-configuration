@@ -6,7 +6,7 @@ in
 {
     imports = [
         ./extensions.nix
-        ./dconf.nix
+        #        ./dconf.nix
     ];
 
   options.gnome = {

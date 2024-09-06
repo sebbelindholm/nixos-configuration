@@ -13,6 +13,8 @@ in
   config = lib.mkIf syspkg.enable {
     environment.systemPackages = with pkgs; [
         wget
+            nodePackages_latest.typescript-language-server
+            vscode-langservers-extracted
             nodejs
         nvtopPackages.full
         btop
