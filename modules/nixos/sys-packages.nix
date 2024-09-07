@@ -12,7 +12,16 @@ in
 
   config = lib.mkIf syspkg.enable {
     environment.systemPackages = with pkgs; [
+            #FOR RAZER LAPTOP
+            gtk3
+            pkg-config
+            cairo
+            glib
+            glib.dev
+            glibc
+            ################
         wget
+            pciutils
             nodejs
         nvtopPackages.full
         btop

@@ -12,7 +12,7 @@
       ./hardware-configuration.nix
       ../../modules/nixos
 
-        inputs.razerdaemon.nixosModules.default
+                inputs.razer-laptop-control.nixosModules.default
 
       inputs.home-manager.nixosModules.default {
         home-manager.useGlobalPkgs = true;
@@ -36,7 +36,7 @@
     nvidia.enable = true;
     steam.enable = true;
 
-    services.razer-laptop-control.enable = false;
+        services.razer-laptop-control.enable = true;
 
   main-user = {
     enable = true;

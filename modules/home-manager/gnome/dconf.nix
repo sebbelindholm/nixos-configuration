@@ -201,8 +201,8 @@ with lib.hm.gvariant;
     "org/gnome/shell" = {
       command-history = [ "neofetch" "ls" ];
       disable-user-extensions = false;
-      disabled-extensions = [ "places-menu@gnome-shell-extensions.gcampax.github.com" "window-list@gnome-shell-extensions.gcampax.github.com" ];
-      enabled-extensions = [ "arcmenu@arcmenu.com" "auto-move-windows@gnome-shell-extensions.gcampax.github.com" "caffeine@patapon.info" "dash-to-panel@jderose9.github.com" "gnome-ui-tune@itstime.tech" "impatience@gfxmonk.net" "just-perfection-desktop@just-perfection" "launch-new-instance@gnome-shell-extensions.gcampax.github.com" "native-window-placement@gnome-shell-extensions.gcampax.github.com" "tilingshell@ferrarodomenico.com" "trayIconsReloaded@selfmade.pl" "user-theme@gnome-shell-extensions.gcampax.github.com" "blur-my-shell@aunetx" ];
+      disabled-extensions = [ "places-menu@gnome-shell-extensions.gcampax.github.com" "window-list@gnome-shell-extensions.gcampax.github.com" "dash-to-panel@jderose9.github.com" ];
+      enabled-extensions = [ "arcmenu@arcmenu.com" "auto-move-windows@gnome-shell-extensions.gcampax.github.com" "caffeine@patapon.info" "gnome-ui-tune@itstime.tech" "impatience@gfxmonk.net" "just-perfection-desktop@just-perfection" "launch-new-instance@gnome-shell-extensions.gcampax.github.com" "native-window-placement@gnome-shell-extensions.gcampax.github.com" "tilingshell@ferrarodomenico.com" "trayIconsReloaded@selfmade.pl" "user-theme@gnome-shell-extensions.gcampax.github.com" "blur-my-shell@aunetx" "hibernate-status@dromi" ];
       favorite-apps = [ "org.gnome.Nautilus.desktop" "google-chrome.desktop" "org.gnome.Settings.desktop" "kitty.desktop" "spotify.desktop" "steam.desktop" "vesktop.desktop" ];
       last-selected-power-profile = "power-saver";
       welcome-dialog-last-shown-version = "46.2";
@@ -272,11 +272,11 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/caffeine" = {
-      indicator-position-max = 2;
+      indicator-position-max = 1;
     };
 
     "org/gnome/shell/extensions/dash-to-panel" = {
-      appicon-margin = 8;
+      appicon-margin = 1;
       appicon-padding = 4;
       available-monitors = [ 0 ];
       dot-position = "BOTTOM";
@@ -284,13 +284,13 @@ with lib.hm.gvariant;
       leftbox-padding = -1;
       multi-monitors = false;
       panel-anchors = ''
-        {"0":"MIDDLE","1":"MIDDLE"}\n
+        {"0":"MIDDLE","1":"MIDDLE"}\\n\n
       '';
       panel-lengths = ''
-        {"0":100,"1":100}\n
+        {"0":100,"1":100}\\n\n
       '';
       panel-sizes = ''
-        {"0":40,"1":40}\n
+        {"0":40,"1":40}\\n\n
       '';
       primary-monitor = 0;
       status-icon-padding = -1;
