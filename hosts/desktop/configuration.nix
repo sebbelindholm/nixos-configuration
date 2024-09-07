@@ -1,24 +1,34 @@
-
-{ config, pkgs, inputs, self, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  self,
+  ...
+}:
 
 {
   nixpkgs.config.allowUnfree = true;
 
   networking.hostName = "nixos-desktop";
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
-  imports =
-    [
-      ./hardware-configuration.nix
-      ../../modules/nixos
+  imports = [
+    ./hardware-configuration.nix
+    ../../modules/nixos
 
-      inputs.home-manager.nixosModules.default {
-        home-manager.useGlobalPkgs = true;
-        home-manager.useUserPackages = true;
-        home-manager.users.sebastian = import ./home.nix;
-        home-manager.extraSpecialArgs = { inherit inputs; };
-      }
-    ];
+    inputs.home-manager.nixosModules.default
+    {
+      home-manager.useGlobalPkgs = true;
+      home-manager.useUserPackages = true;
+      home-manager.users.sebastian = import ./home.nix;
+      home-manager.extraSpecialArgs = {
+        inherit inputs;
+      };
+    }
+  ];
 
   sys-packages.enable = true;
   amdgpu.enable = true;
@@ -31,7 +41,7 @@
   font.enable = true;
   std-nix.enable = true;
   bluetooth.enable = true;
-    steam.enable = true;
+  steam.enable = true;
 
   main-user = {
     enable = true;
@@ -45,4 +55,3 @@
   system.stateVersion = "24.05";
 
 }
-

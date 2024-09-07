@@ -30,6 +30,7 @@ require("conform").setup({
 		rust = { "rustfmt" },
 		python = { "isort", "black" },
 		c = { "clangd" },
+		nix = { "nixfmt" },
 	},
 	formatters = {
 		injected = { options = { ignore_errors = true } },
@@ -42,4 +43,3 @@ require("conform").setup({
 		lsp_fallback = true,
 	},
 })
-

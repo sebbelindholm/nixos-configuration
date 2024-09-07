@@ -1,7 +1,12 @@
-{ lib, config, pkgs, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
 
 {
-   home.packages = with pkgs.gnomeExtensions; [
+  home.packages = with pkgs.gnomeExtensions; [
     blur-my-shell
     dash-to-panel
     caffeine
@@ -13,7 +18,7 @@
     impatience
     gnome-40-ui-improvements
     tiling-shell
-        hibernate-status-button
-        prime-helper
-  ];   
+    hibernate-status-button
+    prime-helper
+  ];
 }

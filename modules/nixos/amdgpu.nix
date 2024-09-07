@@ -1,12 +1,16 @@
-{ lib, config, pkgs, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
 
 let
   cfg = config.amdgpu;
 in
 {
   options.amdgpu = {
-    enable 
-      = lib.mkEnableOption "enable amdgpu module";
+    enable = lib.mkEnableOption "enable amdgpu module";
   };
 
   config = lib.mkIf cfg.enable {
@@ -14,15 +18,15 @@ in
     services.xserver.videoDrivers = [ "amdgpu" ];
 
     systemd.tmpfiles.rules = [
-        "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"
+      "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"
     ];
 
     hardware.graphics.extraPackages = with pkgs; [
-        rocmPackages.clr.icd
-        clinfo
+      rocmPackages.clr.icd
+      clinfo
     ];
     hardware.graphics = {
-        enable = true;
+      enable = true;
     };
 
     hardware.amdgpu.amdvlk.support32Bit.enable = true;

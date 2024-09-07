@@ -1,12 +1,16 @@
-{ lib, config, pkgs, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
 
 let
   std-sound = config.std-sound;
 in
 {
   options.std-sound = {
-    enable 
-      = lib.mkEnableOption "enable standard sound module";
+    enable = lib.mkEnableOption "enable standard sound module";
   };
 
   config = lib.mkIf std-sound.enable {

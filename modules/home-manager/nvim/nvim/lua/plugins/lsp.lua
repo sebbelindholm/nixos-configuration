@@ -37,3 +37,5 @@ lspconfig.lua_ls.setup({
 })
 lspconfig.clangd.setup({ capabilities = capabilities })
 lspconfig.tsserver.setup({ capabilities = capabilities })
+lspconfig.html.setup({ capabilities = capabilities })
+lspconfig.cssls.setup({ capabilities = capabilities })

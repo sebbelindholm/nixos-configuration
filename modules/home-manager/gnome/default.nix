@@ -1,24 +1,26 @@
-{ lib, config, pkgs, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
 
 let
   cfg = config.gnome;
 in
 {
-    imports = [
-        ./extensions.nix
-        ./dconf.nix
-    ];
+  imports = [
+    ./extensions.nix
+  ];
 
   options.gnome = {
-    enable 
-      = lib.mkEnableOption "enable gnome module";
+    enable = lib.mkEnableOption "enable gnome module";
   };
 
   config = lib.mkIf cfg.enable {
     dconf.enable = true;
     home.packages = with pkgs; [
-        gnome-extension-manager
+      gnome-extension-manager
     ];
   };
 }
-
