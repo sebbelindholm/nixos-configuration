@@ -18,7 +18,7 @@ in
       kitty
       vesktop
       lazygit
-      google-chrome
+      firefox
       vscode
       bitwarden-desktop
       dconf2nix

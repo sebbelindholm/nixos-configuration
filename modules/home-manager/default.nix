@@ -13,5 +13,6 @@
     ./terminal/zsh.nix
     ./gnome
     ./nvim
+    ./browser
   ];
 }

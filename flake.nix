@@ -9,6 +9,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nixos-hardware.url = "github:NixOS/nixos-hardware";
+
     razerdaemon.url = "github:Razer-Linux/razer-laptop-control-no-dkms";
 
   };
@@ -33,6 +35,9 @@
           };
           modules = [
             ./hosts/laptop/configuration.nix
+            #            nixos-hardware.nixosModules.common-gpu-intel
+            #nixos-hardware.nixosModules.common-cpu-intel
+            #nixos-hardware.nixowModules.common-cpu-
           ];
         };
       };

@@ -20,6 +20,7 @@
   gnome.enable = true;
   nvim.enable = true;
   kitty.enable = true;
+  google-chrome.enable = true;
 
   home.packages = [
     #SOME HOME PACKAGES SPECIFIC TO THIS MACHINE

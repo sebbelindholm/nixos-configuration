@@ -16,6 +16,10 @@ in
   config = lib.mkIf cfg.enable {
     services.xserver.enable = true;
 
+    environment.sessionVariables.NIXOS_OZONE_WL = "1";
+    nixpkgs.config.google-chrome.commandLineArgs = "--enable-features=UseOzonePlatform --ozone-platform=wayland --ignore-gpu-blocklist
+--enable-zero-copy --enable-features=VaapiVideoDecodeLinuxGL";
+
     services.xserver.displayManager.gdm.enable = true;
     services.xserver.desktopManager.gnome.enable = true;
 
@@ -25,4 +29,3 @@ in
     };
   };
 }
-

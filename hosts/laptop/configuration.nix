@@ -44,6 +44,7 @@
   bluetooth.enable = true;
   laptop.enable = true;
   nvidia.enable = true;
+  igpu-intel.enable = true;
   steam.enable = true;
 
   services.razer-laptop-control.enable = false;
