@@ -70,22 +70,22 @@
         "type": "github"
       }
     },
-    "razer-laptop-control": {
+    "razerdaemon": {
       "inputs": {
         "flake-utils": "flake-utils",
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1725542286,
-        "narHash": "sha256-FKzhcvj5516mdRnwFDvn3UhAgGjHD5+hn1nY/I+Mzlc=",
-        "owner": "sebbelindholm",
-        "repo": "razer-laptop-control",
-        "rev": "e720e2215c68b2c5496297264c23712642dce91d",
+        "lastModified": 1724132815,
+        "narHash": "sha256-3F5d9D/MrAQwhdbW91v3eR+/tySitziQTAyfsP0zUOk=",
+        "owner": "Razer-Linux",
+        "repo": "razer-laptop-control-no-dkms",
+        "rev": "17f82d62a47b985c6ababd4af619b82ee9285a15",
         "type": "github"
       },
       "original": {
-        "owner": "sebbelindholm",
-        "repo": "razer-laptop-control",
+        "owner": "Razer-Linux",
+        "repo": "razer-laptop-control-no-dkms",
         "type": "github"
       }
     },
@@ -93,7 +93,7 @@
       "inputs": {
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
-        "razer-laptop-control": "razer-laptop-control"
+        "razerdaemon": "razerdaemon"
       }
     },
     "systems": {
