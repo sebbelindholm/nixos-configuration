@@ -1,12 +1,16 @@
-{ lib, config, pkgs, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
 
 let
   cfg = config.boot;
 in
 {
   options.boot = {
-    enable 
-      = lib.mkEnableOption "enable boot module";
+    enable = lib.mkEnableOption "enable boot module";
   };
 
   config = lib.mkIf cfg.enable {
@@ -15,3 +19,4 @@ in
     boot.loader.efi.canTouchEfiVariables = true;
   };
 }
+

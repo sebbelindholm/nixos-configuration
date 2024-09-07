@@ -1,9 +1,14 @@
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
-  imports = [                              
+  imports = [
     ./home-packages.nix
-        ./terminal/kitty.nix
+    ./terminal/kitty.nix
     ./terminal/git.nix
     ./terminal/zsh.nix
     ./gnome

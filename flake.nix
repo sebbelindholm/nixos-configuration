@@ -5,31 +5,36 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     home-manager = {
-        url = "github:nix-community/home-manager";
-        inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     razerdaemon.url = "github:Razer-Linux/razer-laptop-control-no-dkms";
 
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: {
+  outputs =
+    { self, nixpkgs, ... }@inputs:
+    {
 
-    nixosConfigurations = {
-      nixos-desktop = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
-        modules = [
-          ./hosts/desktop/configuration.nix
-        ];
-      };
+      nixosConfigurations = {
+        nixos-desktop = nixpkgs.lib.nixosSystem {
+          specialArgs = {
+            inherit inputs;
+          };
+          modules = [
+            ./hosts/desktop/configuration.nix
+          ];
+        };
 
-      nixos-laptop =
-        nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs;};
-        modules = [
-          ./hosts/laptop/configuration.nix
-        ];
+        nixos-laptop = nixpkgs.lib.nixosSystem {
+          specialArgs = {
+            inherit inputs;
+          };
+          modules = [
+            ./hosts/laptop/configuration.nix
+          ];
+        };
       };
     };
-  };
 }
