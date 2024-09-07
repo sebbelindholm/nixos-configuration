@@ -47,7 +47,10 @@
   igpu-intel.enable = true;
   steam.enable = true;
 
-  services.razer-laptop-control.enable = false;
+  services.razer-laptop-control.enable = true;
+  services.udev.extraRules = ''
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0660", GROUP="plugdev"
+  ''; # needed for correct permissions for razer-laptop-control
 
   main-user = {
     enable = true;
