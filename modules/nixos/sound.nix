@@ -14,10 +14,10 @@ in
   };
 
   config = lib.mkIf std-sound.enable {
-    hardware.pulseaudio.enable = false;
+    hardware.pulseaudio.enable = lib.mkForce false;
     security.rtkit.enable = true;
     services.pipewire = {
-      enable = true;
+      enable = lib.mkForce true;
       alsa.enable = true;
       alsa.support32Bit = true;
       pulse.enable = true;
