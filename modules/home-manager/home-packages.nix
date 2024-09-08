@@ -18,11 +18,8 @@ in
       kitty
       vesktop
       lazygit
-      firefox
-      vscode
+      neofetch
       bitwarden-desktop
-      dconf2nix
-      blackbox-terminal
       spotify
       gnome-tweaks
     ];
