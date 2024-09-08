@@ -23,5 +23,6 @@
     ./igpu-intel.nix
     ./steam.nix
     ./laptop.nix
+    ./rgb.nix
   ];
 }

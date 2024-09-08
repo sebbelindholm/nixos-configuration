@@ -47,6 +47,7 @@
   std-nix.enable = true;
   bluetooth.enable = true;
   steam.enable = true;
+  rgb.enable = true;
 
   main-user = {
     enable = true;
