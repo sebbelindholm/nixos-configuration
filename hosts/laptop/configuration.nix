@@ -32,6 +32,11 @@
     }
   ];
 
+  services.fstrim = {
+    enable = true;
+    interval = "weekly";
+  };
+
   sys-packages.enable = true;
   std-sound.enable = true;
   xserver-module.enable = true;

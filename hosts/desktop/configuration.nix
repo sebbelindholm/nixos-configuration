@@ -30,6 +30,11 @@
     }
   ];
 
+  services.fstrim = {
+    enable = true;
+    interval = "weekly";
+  };
+
   sys-packages.enable = true;
   amdgpu.enable = true;
   std-sound.enable = true;
