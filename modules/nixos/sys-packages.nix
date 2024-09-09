@@ -16,6 +16,10 @@ in
 
   config = lib.mkIf syspkg.enable {
     environment.systemPackages = with pkgs; [
+      delta
+      eza
+      bat
+      fzf
       wget
       libva-utils
       nodePackages_latest.typescript-language-server
@@ -46,7 +50,6 @@ in
       nodejs_22
       wl-clipboard
       fd
-      fzf
       lua-language-server
       gnumake
       cmake
