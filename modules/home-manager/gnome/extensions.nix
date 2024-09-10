@@ -20,5 +20,6 @@
     tiling-shell
     hibernate-status-button
     prime-helper
+    rocketbar
   ];
 }
