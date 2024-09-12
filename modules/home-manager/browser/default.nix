@@ -23,6 +23,7 @@ in
         "--ignore-gpu-blocklist"
         "--enable-zero-copy"
         "--enable-features=VaapiVideoDecodeLinuxGL"
+        "--enable-features=TouchpadOverscrollHistoryNavigation"
       ];
     };
   };
