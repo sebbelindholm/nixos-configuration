@@ -41,5 +41,6 @@
     numb-nvim
     onedark-nvim
     tokyonight-nvim
+    auto-session
   ];
 }

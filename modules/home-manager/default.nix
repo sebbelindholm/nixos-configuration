@@ -14,5 +14,6 @@
     ./gnome
     ./nvim
     ./browser
+    ./gtk
   ];
 }

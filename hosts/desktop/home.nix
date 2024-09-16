@@ -21,6 +21,7 @@
   nvim.enable = true;
   kitty.enable = true;
   google-chrome.enable = true;
+  gtk_module.enable = true;
 
   home.packages = [
     #SOME HOME PACKAGES SPECIFIC TO THIS MACHINE
