@@ -22,6 +22,7 @@
   kitty.enable = true;
   google-chrome.enable = true;
   gtk_module.enable = true;
+  starship.enable = true;
 
   home.packages = [
     #SOME HOME PACKAGES SPECIFIC TO THIS MACHINE

@@ -67,12 +67,6 @@ in
           export BAT_THEME=DarkNeon
         '';
       };
-      starship = {
-        enable = true;
-        settings = {
-
-        };
-      };
     };
   };
 }
