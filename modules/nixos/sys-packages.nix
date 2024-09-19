@@ -16,6 +16,9 @@ in
 
   config = lib.mkIf syspkg.enable {
     environment.systemPackages = with pkgs; [
+      gnome-boxes
+      via
+      vial
       delta
       eza
       bat

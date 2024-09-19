@@ -24,5 +24,6 @@
     ./steam.nix
     ./laptop.nix
     ./rgb.nix
+    ./udev.nix
   ];
 }

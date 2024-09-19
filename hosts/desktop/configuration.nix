@@ -48,6 +48,7 @@
   bluetooth.enable = true;
   steam.enable = true;
   rgb.enable = true;
+  udev.enable = true;
 
   main-user = {
     enable = true;
