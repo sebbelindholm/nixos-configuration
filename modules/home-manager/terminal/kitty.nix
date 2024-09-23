@@ -19,7 +19,7 @@ in
       settings = {
         confirm_os_window_close = 0;
       };
-      theme = "Tokyo Night";
+      themeFile = "tokyo_night_night";
       font.name = "JetbrainsMono Nerd Font";
       font.size = 14;
     };
