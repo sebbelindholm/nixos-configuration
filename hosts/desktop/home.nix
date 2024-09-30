@@ -28,6 +28,10 @@
   ags.enable = true;
   qt.enable = true;
 
+  home.file.".config/hypr/device_specific.conf" = {
+    source = ./device_specific.conf;
+  };
+
   home.packages = [
     #SOME HOME PACKAGES SPECIFIC TO THIS MACHINE
   ];

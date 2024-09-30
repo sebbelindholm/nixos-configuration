@@ -12,6 +12,7 @@
 
   imports = [
     ../../modules/home-manager
+    inputs.ags.homeManagerModules.default
   ];
 
   home-packages.enable = true;
@@ -22,6 +23,14 @@
   kitty.enable = true;
   google-chrome.enable = true;
   gtk_module.enable = true;
+  starship.enable = true;
+  hypr.enable = true;
+  ags.enable = true;
+  qt.enable = true;
+
+  home.file.".config/hypr/device_specific.conf" = {
+    source = ./device_specific.conf;
+  };
 
   home.packages = [
     #SOME HOME PACKAGES SPECIFIC TO THIS MACHINE
