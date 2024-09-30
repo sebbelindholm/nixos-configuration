@@ -16,7 +16,8 @@ in
 
   config = lib.mkIf syspkg.enable {
     environment.systemPackages = with pkgs; [
-      gnome-boxes
+      killall
+      zulu8
       via
       vial
       delta

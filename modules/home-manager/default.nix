@@ -16,5 +16,8 @@
     ./nvim
     ./browser
     ./gtk
+    ./hypr
+    ./ags
+    ./qt
   ];
 }

@@ -9,6 +9,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    hyprland.url = "github:hyprwm/Hyprland";
+
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
+    };
+
+    ags.url = "github:Aylur/ags";
+
     nixos-hardware.url = "github:NixOS/nixos-hardware";
 
     razerdaemon.url = "github:mardukpill/razer-laptop-control-no-dkms";
