@@ -37,4 +37,6 @@ lspconfig.lua_ls.setup({
 lspconfig.clangd.setup({ capabilities = capabilities })
 lspconfig.ts_ls.setup({ capabilities = capabilities })
 lspconfig.html.setup({ capabilities = capabilities })
-lspconfig.cssls.setup({})
+lspconfig.cssls.setup({ capabilities = capabilities })
+lspconfig.matlab_ls.setup({ capabilities = capabilities })
+lspconfig.texlab.setup({ capabilities = capabilities })

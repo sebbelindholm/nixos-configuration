@@ -42,5 +42,6 @@
     onedark-nvim
     tokyonight-nvim
     auto-session
+    vimtex
   ];
 }

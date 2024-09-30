@@ -15,7 +15,9 @@ in
 
   config = lib.mkIf cfg.enable {
     home.packages = with pkgs; [
+      octaveFull
       prismlauncher
+      zathura
       kitty
       rpi-imager
       vesktop

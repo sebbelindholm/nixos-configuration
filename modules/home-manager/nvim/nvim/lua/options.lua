@@ -1,4 +1,5 @@
 vim.g.mapleader = " "
+vim.g.maplocalleader = ","
 vim.o.expandtab = true
 vim.o.tabstop = 4
 vim.o.softtabstop = 4
@@ -17,6 +18,8 @@ vim.o.splitbelow = true
 vim.o.scrolloff = 10
 vim.o.conceallevel = 3
 vim.o.shiftwidth = 4
+
+vim.g.vimtex_view_method = "zathura"
 
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.keymap.set("n", "<leader>vv", ":vsplit<CR>", { silent = true, desc = "Split vertical" })
@@ -50,4 +53,3 @@ function _G.set_terminal_keymap()
 end
 
 vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymap()")
-

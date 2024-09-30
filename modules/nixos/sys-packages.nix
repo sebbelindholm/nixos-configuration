@@ -28,6 +28,8 @@ in
       libva-utils
       nodePackages_latest.typescript-language-server
       vscode-langservers-extracted
+      matlab-language-server
+      texlab
       nodejs
       nvtopPackages.full
       btop
@@ -55,6 +57,7 @@ in
       wl-clipboard
       fd
       lua-language-server
+      texliveFull
       gnumake
       cmake
       sumneko-lua-language-server
