@@ -39,15 +39,22 @@ in
       gtk3
     ];
 
+    home.sessionVariables = {
+      XDG_CURRENT_DESKTOP = "Hyprland";
+      XDG_SESSION_TYPE = "wayland";
+      XDG_SESSION_DESKTOP = "Hyprland";
+    };
+
     wayland.windowManager.hyprland = {
       enable = true;
       package = inputs.hyprland.packages.${pkgs.system}.default;
+      systemd.variables = [ "--all" ];
 
-      plugins = [
-        #        inputs.hyprland-plugins.packages."${pkgs.system}".overview
-        inputs.hyprland-plugins.packages."${pkgs.system}".hyprbars
-        #inputs.hyprland-plugins.packages."${pkgs.system}".hyprfocus
-      ];
+      #plugins = [
+      #  #        inputs.hyprland-plugins.packages."${pkgs.system}".overview
+      #  inputs.hyprland-plugins.packages."${pkgs.system}".hyprbars
+      #  #inputs.hyprland-plugins.packages."${pkgs.system}".hyprfocus
+      #];
     };
 
     home.file.".config/hypr" = {
