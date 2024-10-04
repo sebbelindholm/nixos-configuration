@@ -37,6 +37,7 @@ in
       pavucontrol
       networkmanager
       gtk3
+      nautilus
     ];
 
     home.sessionVariables = {
@@ -46,7 +47,7 @@ in
     };
 
     wayland.windowManager.hyprland = {
-      enable = true;
+      #enable = true;
       package = inputs.hyprland.packages.${pkgs.system}.default;
       systemd.variables = [ "--all" ];
 
