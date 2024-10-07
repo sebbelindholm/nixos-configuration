@@ -49,6 +49,7 @@
   steam.enable = true;
   rgb.enable = true;
   udev.enable = true;
+  services.enable = true;
 
   main-user = {
     enable = true;

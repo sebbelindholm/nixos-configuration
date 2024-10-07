@@ -25,5 +25,6 @@
     ./laptop.nix
     ./rgb.nix
     ./udev.nix
+    ./services.nix
   ];
 }

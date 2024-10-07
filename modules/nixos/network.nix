@@ -17,4 +17,3 @@ in
     networking.networkmanager.enable = true;
   };
 }
-
