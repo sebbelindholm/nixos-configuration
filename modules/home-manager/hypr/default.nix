@@ -21,6 +21,7 @@ in
   config = lib.mkIf cfg.enable {
     home.packages = with pkgs; [
       hyprshot
+      udiskie
       hyprlock
       hypridle
       swaybg

@@ -16,6 +16,7 @@ in
   config = lib.mkIf cfg.enable {
     home.packages = with pkgs; [
       octaveFull
+      gparted
       prismlauncher
       zathura
       kitty
