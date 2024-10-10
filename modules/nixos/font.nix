@@ -14,7 +14,9 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    fonts.packages = with pkgs; [ (nerdfonts.override { fonts = [ "JetBrainsMono" ]; }) ];
+    fonts.packages = with pkgs; [
+      ubuntu_font_family
+      (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    ];
   };
 }
-

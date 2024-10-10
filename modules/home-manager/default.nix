@@ -12,6 +12,7 @@
     ./terminal/git.nix
     ./terminal/zsh.nix
     ./terminal/starship.nix
+    ./cosmic
     ./gnome
     ./nvim
     ./browser
@@ -19,5 +20,6 @@
     ./hypr
     ./ags
     ./qt
+    ./wayland
   ];
 }

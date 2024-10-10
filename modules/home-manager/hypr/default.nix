@@ -28,7 +28,6 @@ in
       bun
       dart-sass
       fd
-      swww
       brightnessctl
       slurp
       wf-recorder

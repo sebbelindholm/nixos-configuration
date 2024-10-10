@@ -18,6 +18,7 @@ in
     environment.systemPackages = with pkgs; [
       killall
       zulu8
+      xclip
       via
       vial
       delta

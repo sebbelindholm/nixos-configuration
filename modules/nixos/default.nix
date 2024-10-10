@@ -9,6 +9,7 @@
   imports = [
     ./sys-packages.nix
     ./main-user.nix
+    ./vars.nix
     ./ssh.nix
     ./sound.nix
     ./xserver-module.nix

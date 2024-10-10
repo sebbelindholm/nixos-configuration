@@ -17,14 +17,15 @@ in
   config = lib.mkIf cfg.enable {
     services.xserver.enable = true;
 
-    environment.sessionVariables.NIXOS_OZONE_WL = "1";
     nixpkgs.config.google-chrome.commandLineArgs = "--enable-features=UseOzonePlatform --ozone-platform=wayland --ignore-gpu-blocklist
 --enable-zero-copy --enable-features=VaapiVideoDecodeLinuxGL";
 
-    services.xserver.displayManager.gdm.enable = true;
-    services.xserver.desktopManager.gnome.enable = false;
+    services.xserver.displayManager.lightdm.enable = false;
+    services.xserver.desktopManager.budgie.enable = false;
+    services.desktopManager.cosmic.enable = true;
+    services.displayManager.cosmic-greeter.enable = true;
     programs.hyprland = {
-      enable = true;
+      enable = false;
       xwayland.enable = true;
       package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
       portalPackage =

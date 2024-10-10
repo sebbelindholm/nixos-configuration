@@ -22,6 +22,8 @@
 
     razerdaemon.url = "github:mardukpill/razer-laptop-control-no-dkms";
 
+    nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
+
   };
 
   outputs =
