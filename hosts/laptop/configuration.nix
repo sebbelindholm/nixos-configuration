@@ -20,7 +20,7 @@
     ../../modules/nixos
 
     inputs.razerdaemon.nixosModules.default
-
+    inputs.nixos-cosmic.nixosModules.default
     inputs.home-manager.nixosModules.default
     {
       home-manager.useGlobalPkgs = true;
@@ -51,6 +51,8 @@
   nvidia.enable = true;
   igpu-intel.enable = true;
   steam.enable = true;
+  services.enable = true;
+  vars.enable = true;
 
   services.razer-laptop-control.enable = true;
   services.udev.extraRules = ''

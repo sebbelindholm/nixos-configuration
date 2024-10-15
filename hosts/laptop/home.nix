@@ -27,6 +27,8 @@
   hypr.enable = true;
   ags.enable = true;
   qt.enable = true;
+  wayland.enable = true;
+  cosmic.enable = true;
 
   home.file.".config/hypr/device_specific.conf" = {
     source = ./device_specific.conf;
