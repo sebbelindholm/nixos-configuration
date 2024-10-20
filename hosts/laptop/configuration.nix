@@ -51,6 +51,9 @@
   nvidia.enable = true;
   igpu-intel.enable = true;
   steam.enable = true;
+  services.enable = true;
+  vars.enable = true;
+  udev.enable = true;
 
   services.razer-laptop-control.enable = true;
   services.udev.extraRules = ''

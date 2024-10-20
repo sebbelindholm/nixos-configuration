@@ -10,9 +10,12 @@ let
   cfg = config.hypr;
 in
 {
-  imports =
-    [
-    ];
+  imports = [
+    ./hyprland.nix
+    ./rofi.nix
+    ./dunst.nix
+    ./waybar.nix
+  ];
 
   options.hypr = {
     enable = lib.mkEnableOption "enable hypr module";
@@ -21,23 +24,21 @@ in
   config = lib.mkIf cfg.enable {
     home.packages = with pkgs; [
       hyprshot
+      blueman
+      pamixer
       udiskie
       hyprlock
       hypridle
       swaybg
-      bun
-      dart-sass
-      fd
       brightnessctl
-      slurp
       wf-recorder
       wl-clipboard
-      swappy
-      hyprpicker
-      pavucontrol
       networkmanager
-      gtk3
       nautilus
+      rofi-wayland
+      cliphist
+      wl-clipboard
+      wl-clip-persist
     ];
 
     home.sessionVariables = {
@@ -46,21 +47,5 @@ in
       XDG_SESSION_DESKTOP = "Hyprland";
     };
 
-    wayland.windowManager.hyprland = {
-      #enable = true;
-      package = inputs.hyprland.packages.${pkgs.system}.default;
-      systemd.variables = [ "--all" ];
-
-      #plugins = [
-      #  #        inputs.hyprland-plugins.packages."${pkgs.system}".overview
-      #  inputs.hyprland-plugins.packages."${pkgs.system}".hyprbars
-      #  #inputs.hyprland-plugins.packages."${pkgs.system}".hyprfocus
-      #];
-    };
-
-    home.file.".config/hypr" = {
-      source = ./hypr;
-      recursive = true;
-    };
   };
 }

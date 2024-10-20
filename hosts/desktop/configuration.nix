@@ -18,7 +18,6 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules/nixos
-    inputs.nixos-cosmic.nixosModules.default
     inputs.home-manager.nixosModules.default
     {
       home-manager.useGlobalPkgs = true;

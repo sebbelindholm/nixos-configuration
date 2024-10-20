@@ -12,14 +12,13 @@
     ./terminal/git.nix
     ./terminal/zsh.nix
     ./terminal/starship.nix
-    ./cosmic
     ./gnome
     ./nvim
     ./browser
     ./gtk
     ./hypr
-    ./ags
     ./qt
     ./wayland
+    ./nix-colors
   ];
 }

@@ -11,18 +11,16 @@
 
     hyprland.url = "github:hyprwm/Hyprland";
 
+    nix-colors.url = "github:misterio77/nix-colors";
+
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
 
-    ags.url = "github:Aylur/ags";
-
     nixos-hardware.url = "github:NixOS/nixos-hardware";
 
     razerdaemon.url = "github:mardukpill/razer-laptop-control-no-dkms";
-
-    nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
 
   };
 

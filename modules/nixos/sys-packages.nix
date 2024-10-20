@@ -17,6 +17,7 @@ in
   config = lib.mkIf syspkg.enable {
     environment.systemPackages = with pkgs; [
       killall
+      qmk
       zulu8
       xclip
       via
