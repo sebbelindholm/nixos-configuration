@@ -24,6 +24,7 @@ in
   config = lib.mkIf cfg.enable {
     home.packages = with pkgs; [
       hyprshot
+      playerctl
       pavucontrol
       blueman
       rofi-power-menu

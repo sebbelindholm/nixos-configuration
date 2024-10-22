@@ -244,7 +244,7 @@
       binde = [
         ",XF86AudioRaiseVolume,exec, pamixer -i 5"
         ",XF86AudioLowerVolume,exec, pamixer -d 5"
-        ",XF86AudioMuteVolume,exec, pamixer -t"
+        ",XF86AudioMute,exec, pamixer -t"
       ];
 
       # mouse binding
