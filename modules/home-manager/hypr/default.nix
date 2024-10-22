@@ -24,6 +24,8 @@ in
   config = lib.mkIf cfg.enable {
     home.packages = with pkgs; [
       hyprshot
+      pavucontrol
+      light
       blueman
       pamixer
       udiskie

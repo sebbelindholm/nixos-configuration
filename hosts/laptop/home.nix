@@ -12,6 +12,7 @@
 
   imports = [
     ../../modules/home-manager
+    inputs.nix-colors.homeManagerModules.default
   ];
 
   home-packages.enable = true;
@@ -25,14 +26,8 @@
   starship.enable = true;
   hypr.enable = true;
   qt.enable = true;
-<<<<<<< HEAD
   wayland.enable = true;
   colors.enable = true;
-||||||| 77a5201
-=======
-  wayland.enable = true;
-  cosmic.enable = true;
->>>>>>> 19e86c307ce01e419066e831b231d47ae7283682
 
   home.file.".config/hypr/device_specific.conf" = {
     source = ./device_specific.conf;

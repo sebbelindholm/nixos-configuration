@@ -1,58 +1,126 @@
-{ config, ... }:
-let
-  custom = {
-    font = "JetBrainsMono Nerd Font";
-    font_size = "18px";
-    font_weight = "bold";
-    text_color = "#FBF1C7";
-    background_0 = "#${config.colorScheme.palette.base00}";
-    background_1 = "#282828";
-    border_color = "#928374";
-    red = "#CC241D";
-    green = "#98971A";
-    yellow = "#FABD2F";
-    blue = "#458588";
-    magenta = "#B16286";
-    cyant = "#689D6A";
-    orange = "#D65D0E";
-    orange_bright = "#DDDDDD";
-    opacity = "1";
-    indicator_height = "2px";
-  };
-in
+{ config, lib, ... }:
 {
   programs.waybar = {
     enable = true;
 
-    settings.mainBar = with custom; {
-      height = 30;
+    settings.mainBar = {
       layer = "top";
       position = "top";
+      margin-top = 10;
+      margin-left = 10;
+      margin-right = 10;
+      spacing = 10;
 
-      modules-left = [ ];
+      modules-left = [ "hyprland/workspaces" ];
       modules-center = [ "clock" ];
-      modules-right = [ ];
+      modules-right = [
+        "tray"
+        "battery"
+        "backlight"
+        "pulseaudio"
+      ];
 
       battery = {
         format = "{icon} {capacity}%";
-        format-alt = "{icon} {time}";
+        format-alt = "{icon} {time} {power}";
+        format-icons = [
+          ""
+          ""
+          ""
+          ""
+          ""
+          ""
+        ];
       };
 
       pulseaudio = {
         format = "{icon} {volume}%";
+        on-click-right = "pavucontrol";
+        format-icons = {
+          default = [
+            ""
+            ""
+            ""
+          ];
+        };
       };
 
       clock = {
         format-alt = "{:%Y-%m-%d}";
       };
 
-      "hyprland/workspaces" = {
-        format = "{icon}";
-        on-click = "activate";
-        format-icons = [
+      tray = {
+        spacing = 4;
+      };
 
+      backlight = {
+        on-scroll-up = "exec light -A 2";
+        on-scroll-down = "exec light -U 2";
+        format = "{icon} {percent}%";
+        format-icons = [
+          ""
+          ""
+          ""
+          ""
+          ""
+          ""
+          ""
+          ""
+          ""
         ];
       };
+
+      "hyprland/workspaces" = {
+        on-click = "activate";
+      };
+    };
+  };
+  home.file = {
+    ".config/waybar/style.css" = {
+      text = ''
+        * {
+          font-family: JetbrainsMono Nerd Font;
+          font-size: 14px;
+          font-weight: bold;
+          min-height: 0;
+        }
+        window#waybar {
+          background: #${config.colorScheme.palette.base00};
+          border-radius: 10px;
+          padding: 8px;
+        }
+        #backlight,
+        #pulseaudio,
+        #clock,
+        #tray,
+        #battery {
+          padding-right: 8px;
+          padding-left: 8px;
+          padding-top: 2px;
+          padding-bottom: 2px;
+          margin: 5px;
+          background: #${config.colorScheme.palette.base01};
+          border-radius: 10px;
+          color: #${config.colorScheme.palette.base09};
+        }
+        #workspaces {
+          padding-right: 8px;
+          padding-left: 8px;
+          padding-top: 2px;
+          padding-bottom: 2px;
+          margin: 5px;
+          border-radius: 10px;
+        }
+        #workspaces button {
+          color: #${config.colorScheme.palette.base09};
+          background: #${config.colorScheme.palette.base01};
+        }
+        #workspaces button.active{
+          color: #${config.colorScheme.palette.base01};
+          background: #${config.colorScheme.palette.base09};
+
+        }
+      '';
     };
   };
 }

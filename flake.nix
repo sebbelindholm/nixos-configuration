@@ -18,6 +18,8 @@
       inputs.hyprland.follows = "hyprland";
     };
 
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+
     nixos-hardware.url = "github:NixOS/nixos-hardware";
 
     razerdaemon.url = "github:mardukpill/razer-laptop-control-no-dkms";

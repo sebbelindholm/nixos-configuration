@@ -20,8 +20,8 @@
         "nm-applet &"
         "wl-clip-persist --clipboard both &"
         "wl-paste --watch cliphist store &"
-        #"waybar &"
         "dunst &"
+        "waybar &"
         "hyprctl setcursor Bibata-Modern-Ice 24 &"
         "swaybg -i ~/.setup/extras/wallpapers/tokyo.png"
       ];
@@ -36,6 +36,10 @@
         touchpad = {
           natural_scroll = true;
         };
+      };
+
+      gestures = {
+        workspace_swipe = 1;
       };
 
       general = {
@@ -127,8 +131,8 @@
           "fadeShadow,  1, 10,  easeOutCirc" # fade on changing activewindow for shadows
           "fadeDim,     1, 4,   fluent_decel" # the easing of the dimming of inactive windows
           # "border,      1, 2.7, easeOutCirc"  # for animating the border's color switch speed
-          # "borderangle, 1, 30,  fluent_decel, once" # for animating the border's gradient angle - styles: once (default), loop
-          "workspaces,  1, 4,   easeOutCubic, fade" # styles: slide, slidevert, fade, slidefade, slidefadevert
+          # "borderangle, 1, 30,  fluent_decel, once" # for animating the border's gradient angle -
+          "workspaces,  1, 4,   easeOutCubic, fade" # styles: slide, slidevert, fade, slidefade
         ];
       };
 

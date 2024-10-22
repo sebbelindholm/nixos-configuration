@@ -30,7 +30,7 @@ require("conform").setup({
 		rust = { "rustfmt" },
 		python = { "isort", "black" },
 		c = { "clangd" },
-		nix = { "nixfmt" },
+		--nix = { "nixfmt" },
 	},
 	formatters = {
 		injected = { options = { ignore_errors = true } },
