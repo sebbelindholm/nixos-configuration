@@ -25,8 +25,8 @@ in
     home.packages = with pkgs; [
       hyprshot
       pavucontrol
-      light
       blueman
+      rofi-power-menu
       pamixer
       udiskie
       hyprlock
@@ -48,6 +48,9 @@ in
       XDG_SESSION_TYPE = "wayland";
       XDG_SESSION_DESKTOP = "Hyprland";
     };
+
+    home.file.".config/hypr/hyprlock.conf".source = ./hyprlock.conf;
+    home.file.".config/hypr/hypridle.conf".source = ./hypridle.conf;
 
   };
 }

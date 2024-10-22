@@ -16,13 +16,14 @@
         "systemctl --user import-environment &"
         "hash dbus-update-activation-environment 2>/dev/null &"
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &"
-
+        "hypridle &"
         "nm-applet &"
         "wl-clip-persist --clipboard both &"
         "wl-paste --watch cliphist store &"
         "dunst &"
         "waybar &"
         "hyprctl setcursor Bibata-Modern-Ice 24 &"
+        "udiskie &"
         "swaybg -i ~/.setup/extras/wallpapers/tokyo.png"
       ];
 
@@ -149,6 +150,8 @@
         "$mainMod, Escape, exec, power-menu"
         "$mainMod, P, pseudo,"
         "$mainMod, X, togglesplit,"
+        "$mainMod SHIFT, S, exec, hyprshot -m region --clipboard-only"
+        "$mainMod SHIFT, ESCAPE, exec, rofi -show power-menu -modi power-menu:rofi-power-menu"
         "$mainMod SHIFT, E, exit,"
 
         # switch focus

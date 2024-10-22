@@ -54,8 +54,8 @@
       };
 
       backlight = {
-        on-scroll-up = "exec light -A 2";
-        on-scroll-down = "exec light -U 2";
+        on-scroll-up = "brightnessctl set 5%+";
+        on-scroll-down = "brightnessctl set 5%-";
         format = "{icon} {percent}%";
         format-icons = [
           ""
