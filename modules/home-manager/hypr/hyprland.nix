@@ -242,8 +242,9 @@
 
       # binds that repeat when held
       binde = [
-        ",XF86AudioRaiseVolume,exec, pamixer -i 2"
-        ",XF86AudioLowerVolume,exec, pamixer -d 2"
+        ",XF86AudioRaiseVolume,exec, pamixer -i 5"
+        ",XF86AudioLowerVolume,exec, pamixer -d 5"
+        ",XF86AudioMuteVolume,exec, pamixer -t"
       ];
 
       # mouse binding
@@ -269,11 +270,8 @@
         "idleinhibit focus,mpv"
         "float,udiskie"
         "float,title:^(Transmission)$"
-        "float,title:^(Volume Control)$"
         "float,title:^(Firefox — Sharing Indicator)$"
         "move 0 0,title:^(Firefox — Sharing Indicator)$"
-        "size 700 450,title:^(Volume Control)$"
-        "move 40 55%,title:^(Volume Control)$"
       ];
 
       # windowrulev2
