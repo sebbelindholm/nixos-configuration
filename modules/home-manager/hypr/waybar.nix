@@ -87,7 +87,7 @@
         window#waybar {
           background: #${config.colorScheme.palette.base00};
           border-radius: 10px;
-          padding: 8px;
+          padding: 4px;
         }
         #backlight,
         #pulseaudio,
@@ -98,7 +98,7 @@
           padding-left: 8px;
           padding-top: 2px;
           padding-bottom: 2px;
-          margin: 5px;
+          margin: 2px;
           background: #${config.colorScheme.palette.base01};
           border-radius: 10px;
           color: #${config.colorScheme.palette.base09};
@@ -108,7 +108,7 @@
           padding-left: 8px;
           padding-top: 2px;
           padding-bottom: 2px;
-          margin: 5px;
+          margin: 2px;
           border-radius: 10px;
         }
         #workspaces button {
