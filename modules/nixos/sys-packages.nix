@@ -17,6 +17,11 @@ in
   config = lib.mkIf syspkg.enable {
     environment.systemPackages = with pkgs; [
       killall
+      omnisharp-roslyn
+      dotnetCorePackages.sdk_9_0
+      dotnetCorePackages.sdk_8_0_3xx
+      mono
+      csharp-ls
       qmk
       zulu8
       xclip

@@ -6,10 +6,10 @@
     settings.mainBar = {
       layer = "top";
       position = "top";
-      margin-top = 10;
-      margin-left = 10;
-      margin-right = 10;
-      spacing = 10;
+      output = [
+        "DP-1"
+        "eDP-1"
+      ];
 
       modules-left = [ "hyprland/workspaces" ];
       modules-center = [ "clock" ];
@@ -22,6 +22,7 @@
 
       battery = {
         format = "{icon} {capacity}%";
+        format-charging = " {capacity}%";
         format-alt = "{icon} {time} {power}";
         format-icons = [
           ""
@@ -36,11 +37,12 @@
       pulseaudio = {
         format = "{icon} {volume}%";
         on-click-right = "pavucontrol";
+        format-muted = "󰝟";
         format-icons = {
           default = [
-            ""
-            ""
-            ""
+            " "
+            " "
+            " "
           ];
         };
       };
@@ -72,6 +74,7 @@
 
       "hyprland/workspaces" = {
         on-click = "activate";
+        all-outputs = "true";
       };
     };
   };
@@ -86,39 +89,52 @@
         }
         window#waybar {
           background: #${config.colorScheme.palette.base00};
-          border-radius: 10px;
-          padding: 4px;
+          border-radius: 0px;
+          padding: 0px;
         }
         #backlight,
         #pulseaudio,
         #clock,
         #tray,
         #battery {
-          padding-right: 8px;
-          padding-left: 8px;
-          padding-top: 2px;
-          padding-bottom: 2px;
-          margin: 2px;
-          background: #${config.colorScheme.palette.base01};
-          border-radius: 10px;
+          padding-right: 6px;
+          padding-left: 6px;
+          padding-top: 1px;
+          padding-bottom: 1px;
+          margin-right: 6px;
+          border-bottom: 2px solid;
           color: #${config.colorScheme.palette.base09};
         }
         #workspaces {
-          padding-right: 8px;
-          padding-left: 8px;
-          padding-top: 2px;
-          padding-bottom: 2px;
-          margin: 2px;
-          border-radius: 10px;
+          padding-right: 6px;
+          padding-left: 6px;
+          padding-top: 1px;
+          padding-bottom: 1px;
+          margin: 0px;
+          border-radius: 0px;
+          color: #${config.colorScheme.palette.base09};
         }
         #workspaces button {
-          color: #${config.colorScheme.palette.base09};
-          background: #${config.colorScheme.palette.base01};
+          border-radius: 0px;
         }
         #workspaces button.active{
-          color: #${config.colorScheme.palette.base01};
-          background: #${config.colorScheme.palette.base09};
+          border-bottom: 2px solid #${config.colorScheme.palette.base09};
 
+        }
+        #backlight {
+          border-color: #${config.colorScheme.palette.base0D};
+        }
+        #pulseaudio {
+          border-color: #${config.colorScheme.palette.base0C};
+        }
+        #clock {
+          border-bottom: 0px;
+        }
+        #battery {
+          border-color: #${config.colorScheme.palette.base08};
+        }
+        #battery.charging {
+          border-color: #${config.colorScheme.palette.base0B}
         }
       '';
     };

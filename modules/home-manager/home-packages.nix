@@ -16,8 +16,9 @@ in
   config = lib.mkIf cfg.enable {
     home.packages = with pkgs; [
       octaveFull
-      gparted
+      vscode.fhs
       prismlauncher
+      unityhub
       zathura
       kitty
       rpi-imager

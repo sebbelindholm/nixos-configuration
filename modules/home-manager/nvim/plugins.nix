@@ -7,6 +7,7 @@
 
 {
   programs.neovim.plugins = with pkgs.vimPlugins; [
+    omnisharp-extended-lsp-nvim
     neo-tree-nvim
     telescope-fzf-native-nvim
     telescope-ui-select-nvim
