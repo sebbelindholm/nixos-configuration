@@ -15,6 +15,7 @@
       modules-center = [ "clock" ];
       modules-right = [
         "tray"
+        "idle_inhibitor"
         "battery"
         "backlight"
         "pulseaudio"
@@ -32,6 +33,14 @@
           ""
           ""
         ];
+      };
+
+      idle_inhibitor = {
+        format = "{icon}";
+        format-icons = {
+          activated = [ " 󰄯 " ];
+          deactivated = [ " 󰄰 " ];
+        };
       };
 
       pulseaudio = {
@@ -96,6 +105,7 @@
         #pulseaudio,
         #clock,
         #tray,
+        #idle_inhibitor,
         #battery {
           padding-right: 6px;
           padding-left: 6px;
@@ -135,6 +145,9 @@
         }
         #battery.charging {
           border-color: #${config.colorScheme.palette.base0B}
+        }
+        #idle_inhibitor {
+          border-color: #${config.colorScheme.palette.base0F};
         }
       '';
     };
