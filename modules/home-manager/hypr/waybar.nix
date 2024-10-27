@@ -46,7 +46,8 @@
       pulseaudio = {
         format = "{icon} {volume}%";
         on-click-right = "pavucontrol";
-        format-muted = "󰝟";
+        on-click = "pamixer -t";
+        format-muted = " 󰝟 ";
         format-icons = {
           default = [
             " "
