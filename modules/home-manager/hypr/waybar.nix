@@ -62,7 +62,7 @@
       };
 
       tray = {
-        spacing = 4;
+        spacing = 10;
       };
 
       backlight = {
@@ -132,7 +132,11 @@
           border-bottom: 2px solid #${config.colorScheme.palette.base09};
 
         }
+        #tray {
+          border: 0px;
+        }
         #backlight {
+
           border-color: #${config.colorScheme.palette.base0D};
         }
         #pulseaudio {

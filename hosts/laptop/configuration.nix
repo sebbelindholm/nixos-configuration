@@ -32,9 +32,9 @@
   igpu-intel.enable = true;
 
   services.razer-laptop-control.enable = true;
-  services.udev.extraRules = ''
-    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0660", GROUP="plugdev"
-  ''; # needed for correct permissions for razer-laptop-control
+  #  services.udev.extraRules = ''
+  #  KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0660", GROUP="plugdev"
+  #''; # needed for correct permissions for razer-laptop-control
 
   users.users."sebastian" = {
     extraGroups = [ "openrazer" ];
