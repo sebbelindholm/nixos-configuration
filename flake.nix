@@ -22,7 +22,7 @@
 
     nixos-hardware.url = "github:NixOS/nixos-hardware";
 
-    razerdaemon.url = "github:mardukpill/razer-laptop-control-no-dkms";
+    razerdaemon.url = "github:JosuGZ/razer-laptop-control";
 
   };
 

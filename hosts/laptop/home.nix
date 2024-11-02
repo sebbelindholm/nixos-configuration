@@ -12,7 +12,7 @@
 
   imports = [
     ../../modules/home-manager
-    ../common-home-nix
+    ../common-home.nix
   ];
 
   home.file.".config/hypr/device_specific.conf" = {
