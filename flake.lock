@@ -144,11 +144,11 @@
         "systems": "systems_2"
       },
       "locked": {
-        "lastModified": 1710146030,
-        "narHash": "sha256-SZ5L6eA7HJ/nmkzGG7/ISclqe6oZdOZTNoesiInkXPQ=",
+        "lastModified": 1726560853,
+        "narHash": "sha256-X6rJYSESBVr3hBoH0WbKE5KvhPU5bloyZ2L4K60/fPQ=",
         "owner": "numtide",
         "repo": "flake-utils",
-        "rev": "b1d9ab70662946ef0850d488da1c9019f3a9752a",
+        "rev": "c1dfcf08411b08f6b8615f7d8971a2bfa81d5e8a",
         "type": "github"
       },
       "original": {
@@ -614,11 +614,11 @@
     },
     "nixpkgs_4": {
       "locked": {
-        "lastModified": 1725194671,
-        "narHash": "sha256-tLGCFEFTB5TaOKkpfw3iYT9dnk4awTP/q4w+ROpMfuw=",
+        "lastModified": 1730272153,
+        "narHash": "sha256-B5WRZYsRlJgwVHIV6DvidFN7VX7Fg9uuwkRW9Ha8z+w=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "b833ff01a0d694b910daca6e2ff4a3f26dee478c",
+        "rev": "2d2a9ddbe3f2c00747398f3dc9b05f7f2ebb0f53",
         "type": "github"
       },
       "original": {
@@ -658,15 +658,16 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1730392676,
-        "narHash": "sha256-jOJ6EMpOhB6yednya/6au2OtGI9dg/961HhoRW7yFAU=",
-        "owner": "JosuGZ",
+        "lastModified": 1730548341,
+        "narHash": "sha256-+6bnG9IWqDobF7nwPicEzM/qP9ZCfH5txp/Glra0uz8=",
+        "owner": "sebbelindholm",
         "repo": "razer-laptop-control",
-        "rev": "11826b84ab28232ed6a3a34db30d962d85d406da",
+        "rev": "91dad2975b1627088a56df69de2098e6ea4e3b8f",
         "type": "github"
       },
       "original": {
-        "owner": "JosuGZ",
+        "owner": "sebbelindholm",
+        "ref": "dev-nix",
         "repo": "razer-laptop-control",
         "type": "github"
       }

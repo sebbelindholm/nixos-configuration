@@ -22,7 +22,7 @@
 
     nixos-hardware.url = "github:NixOS/nixos-hardware";
 
-    razerdaemon.url = "github:sebbelindholm/razer-laptop-control/dev";
+    razerdaemon.url = "github:sebbelindholm/razer-laptop-control/dev-nix";
 
   };
 
