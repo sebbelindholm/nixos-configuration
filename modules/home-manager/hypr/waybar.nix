@@ -3,7 +3,7 @@
   programs.waybar = {
     enable = true;
 
-    settings.mainBar = {
+    settings.hyprBar = {
       layer = "top";
       position = "top";
       output = [
@@ -124,9 +124,11 @@
           margin: 0px;
           border-radius: 0px;
           color: #${config.colorScheme.palette.base09};
+          border-bottom: 2px transparent;
         }
         #workspaces button {
           border-radius: 0px;
+          border-bottom: 2px solid transparent;
         }
         #workspaces button.active{
           border-bottom: 2px solid #${config.colorScheme.palette.base09};
