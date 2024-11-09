@@ -16,7 +16,7 @@ vim.o.smartcase = true
 vim.o.splitright = true
 vim.o.splitbelow = true
 vim.o.scrolloff = 10
-vim.o.conceallevel = 3
+vim.o.conceallevel = 2
 vim.o.shiftwidth = 4
 
 vim.g.vimtex_view_method = "zathura"
@@ -30,6 +30,8 @@ vim.keymap.set("n", "<C-v>", '"+p')
 vim.keymap.set("v", "<C-c>", '"+y')
 vim.keymap.set("n", "<leader>db", ":bdelete<CR>", { silent = true, desc = "Delete buffer" })
 vim.keymap.set("n", "<leader>dw", "<C-w>c", { desc = "Delete window (keep buffer)" })
+
+vim.keymap.set("n", "<leader>tm", ":RenderMarkdown toggle", { silent = true, desc = "Toggle markdown view." })
 
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
 

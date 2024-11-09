@@ -146,7 +146,7 @@
         "$mainMod_SHIFT, F, fullscreen, 1"
         "$mainMod SHIFT, Space, togglefloating,"
         "$mainMod, Space, exec, rofi -show drun"
-        "$mainMod SHIFT, L, exec, hyprlock"
+        "$mainMod ALT, L, exec, hyprlock"
         "$mainMod, Escape, exec, power-menu"
         "$mainMod, P, pseudo,"
         "$mainMod, X, togglesplit,"
