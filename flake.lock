@@ -658,16 +658,15 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1730548341,
-        "narHash": "sha256-+6bnG9IWqDobF7nwPicEzM/qP9ZCfH5txp/Glra0uz8=",
-        "owner": "sebbelindholm",
+        "lastModified": 1730818517,
+        "narHash": "sha256-SZuZl80wJJAM8od1f0LYNiNKFyyN0X7l/LC+dL/sYpw=",
+        "owner": "JosuGZ",
         "repo": "razer-laptop-control",
-        "rev": "91dad2975b1627088a56df69de2098e6ea4e3b8f",
+        "rev": "e35199a8fc2f39040ad2a90ca3a12d5458b28651",
         "type": "github"
       },
       "original": {
-        "owner": "sebbelindholm",
-        "ref": "dev-nix",
+        "owner": "JosuGZ",
         "repo": "razer-laptop-control",
         "type": "github"
       }

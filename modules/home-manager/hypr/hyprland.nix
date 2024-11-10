@@ -153,6 +153,8 @@
         "$mainMod SHIFT, S, exec, hyprshot -m region --clipboard-only"
         "$mainMod SHIFT, ESCAPE, exec, rofi -show power-menu -modi power-menu:rofi-power-menu"
         "$mainMod SHIFT, E, exit,"
+        "$mainMod SHIFT, Z, exec, /home/sebastian/.setup/modules/home-manager/scripts/monitor_toggle dual"
+        "$mainMod, Z, exec, /home/sebastian/.setup/modules/home-manager/scripts/monitor_toggle uw"
 
         # switch focus
         "$mainMod, left, movefocus, l"
