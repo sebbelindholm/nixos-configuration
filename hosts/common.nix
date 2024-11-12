@@ -32,7 +32,7 @@
   std-sound.enable = true;
   xserver-module.enable = true;
   locale.enable = true;
-  ssh.enable = false;
+  ssh.enable = true;
   network.enable = true;
   boot.enable = true;
   font.enable = true;
