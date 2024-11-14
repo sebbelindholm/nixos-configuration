@@ -20,6 +20,8 @@ in
     xdg.portal.enable = true;
 
     services.xserver.displayManager.gdm.enable = true;
+    services.desktopManager.cinnamon.enable = true;
+    services.cinnamon.apps.enable = true;
 
     programs.hyprland = {
       enable = true;
