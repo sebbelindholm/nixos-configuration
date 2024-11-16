@@ -53,6 +53,13 @@ end
 
 vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymap()")
 
+vim.cmd([[
+  highlight Normal guibg=none
+  highlight NonText guibg=none
+  highlight Normal ctermbg=none
+  highlight NonText ctermbg=none
+]])
+
 require("plugins.neotree")
 require("plugins.telescope")
 require("plugins.small-plugins")

@@ -25,7 +25,6 @@
   qt.enable = true;
   wayland.enable = true;
   colors.enable = true;
-  niri.enable = true;
 
   programs.home-manager.enable = true;
 }

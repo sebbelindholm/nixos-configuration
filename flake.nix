@@ -51,6 +51,14 @@
             #nixos-hardware.nixowModules.common-cpu-
           ];
         };
+        nixos-vm = nixpkgs.lib.nixosSystem {
+          specialArgs = {
+            inherit inputs;
+          };
+          modules = [
+            ./hosts/vm/configuration.nix
+          ];
+        };
       };
     };
 }

@@ -1,130 +1,99 @@
 { pkgs, config, ... }:
 {
 
-  xdg.configFile."rofi/theme.rasi".text = ''
-    * {
-      bg-col: #${config.colorScheme.palette.base00};
-      bg-col-light: #${config.colorScheme.palette.base01};
-      border-col: #${config.colorScheme.palette.base01};
-      selected-col: #${config.colorScheme.palette.base03};
-      green: #${config.colorScheme.palette.base0B};
-      fg-col: #${config.colorScheme.palette.base05};
-      fg-col2: #${config.colorScheme.palette.base04};
-      grey: #${config.colorScheme.palette.base09};
-      highlight: #${config.colorScheme.palette.base09};
-    }
-  '';
-
   xdg.configFile."rofi/config.rasi".text = ''
-    configuration{
-      modi: "run,drun,window";
-      lines: 5;
-      cycle: false;
-      font: "JetBrainsMono NF Bold 15";
-      show-icons: true;
-      icon-theme: "Papirus-dark";
-      terminal: "kitty";
-      drun-display-format: "{icon} {name}";
-      location: 0;
-      disable-history: true;
-      hide-scrollbar: true;
-      display-drun: " Apps ";
-      display-run: " Run ";
-      display-window: " Window ";
-      /* display-Network: " Network"; */
-      sidebar-mode: true;
-      sorting-method: "fzf";
+    configuration {
+    	modi:				"drun";
+    	font:				"Rubik 10";
+    	show-icons:                     true;
+    	icon-theme: 			"Reversal-dark";
+    	display-drun: 			"";
+    	drun-display-format:            "{name}";
+    	sidebar-mode: 			false;
     }
 
-    @theme "theme"
+    @theme "/dev/null"
 
-    element-text, element-icon , mode-switcher {
-      background-color: inherit;
-      text-color:       inherit;
+    * {
+    	bg:				#151515;
+    	fg:				#ffffff;
+    	accent:				#687363;
+    	button:				#1c1c1c;
+      font: "Ubuntu 14";
+
+    	background-color:		@bg;
+    	text-color:			@fg;
     }
 
     window {
-      height: 480px;
-      width: 400px;
-      border: 3px;
-      border-color: @border-col;
-      background-color: @bg-col;
-      border-radius: 5px;
-    }
-
-    mainbox {
-      background-color: @bg-col;
-    }
-
-    inputbar {
-      children: [prompt,entry];
-      background-color: @bg-col-light;
-      border-radius: 5px;
-      padding: 0px;
+    	border-radius:                  7px;
+    	width:			    	1000px;
+    	padding: 			32px;
     }
 
     prompt {
-      background-color: @green;
-      padding: 4px;
-      text-color: @bg-col-light;
-      border-radius: 3px;
-      margin: 10px 0px 10px 10px;
-    }
-
-    textbox-prompt-colon {
-      expand: false;
-      str: ":";
+    	background-color:		@button;
+    	enabled:			true;
+    	padding:			0.5% 32px 0% -0.5%;
+    	font:				"Ubuntu 10";
     }
 
     entry {
-      padding: 6px;
-      margin: 10px 10px 10px 5px;
-      text-color: @fg-col;
-      background-color: @bg-col;
-      border-radius: 3px;
+        	placeholder:			"Search";
+    	background-color:               @button;
+        	placeholder-color:              @fg;
+        	expand:                         true;
+        	padding:                        0.15% 0% 0% 0%;
+    }
+
+    inputbar {
+    	children:			[ prompt, entry ];
+        	background-color:               @button;
+        	expand:                         false;
+        	border-radius:                  6px;
+        	margin:                         0%;
+        	padding:                        10px;
     }
 
     listview {
-      border: 0px 0px 0px;
-      padding: 6px 0px 0px;
-      margin: 10px 0px 0px 6px;
-      columns: 1;
-      background-color: @bg-col;
-      cycle: true;
+        	columns:                        4;
+        	lines:	                        3;
+        	cycle:                          false;
+        	dynamic:                        true;
+        	layout:                         vertical;
+    }
+
+    mainbox {
+        	children:                       [ inputbar, listview ];
+        	spacing:                       	2%;
+        	padding:                        2% 1% 2% 1%;
     }
 
     element {
-      padding: 8px;
-      margin: 0px 10px 4px 4px;
-      background-color: @bg-col;
-      text-color: @fg-col;
+        	orientation:                    vertical;
+        	padding:                        2% 0% 2% 0%;
     }
 
     element-icon {
-      size: 28px;
+        	size:                           48px;
+        	horizontal-align:	 	0.5;
+    }
+
+    element-text {
+        	expand:                         true;
+        	horizontal-align:               0.5;
+        	vertical-align:                 0.5;
+        	margin:                         0.5% 0.5% -0.5% 0.5%;
+    }
+
+    element-text, element-icon {
+    	background-color:		inherit;
+    	text-color:			inherit;
     }
 
     element selected {
-      background-color:  @selected-col ;
-      text-color: @fg-col2  ;
-      border-radius: 3px;
-    }
-
-    mode-switcher {
-      spacing: 0;
-    }
-
-    button {
-      padding: 10px;
-      background-color: @bg-col-light;
-      text-color: @grey;
-      vertical-align: 0.5; 
-      horizontal-align: 0.5;
-    }
-
-    button selected {
-      background-color: @bg-col;
-      text-color: @green;
+        	background-color:               @button;
+        	border-radius:                  6px;
     }
   '';
 }

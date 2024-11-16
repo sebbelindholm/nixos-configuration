@@ -29,10 +29,10 @@ in
       extraGroups = [
         "networkmanager"
         "wheel"
+        "vboxusers"
       ];
       shell = pkgs.zsh;
     };
     environment.variables.EDITOR = "nvim";
   };
 }
-

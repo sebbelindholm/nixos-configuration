@@ -20,6 +20,5 @@
     ./qt
     ./wayland
     ./nix-colors
-    ./niri
   ];
 }

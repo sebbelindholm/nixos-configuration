@@ -7,6 +7,21 @@ require("which-key").setup({})
 require("colorizer").setup({})
 require("fidget").setup({})
 require("numb").setup({})
+require("transparent").setup({
+	extra_groups = {
+		"NormalFloat",
+		"NormalNC",
+		"NeoTreeNormal",
+		"NeoTreeNormalNC",
+		"TelescopeNormal",
+		"TelescopePrompt",
+		"TelescopePromptBorder",
+		"TelescopePromptTitle",
+		"TelescopeResultsTitle",
+		"TelescopeResultsBorder",
+		"StatusLine",
+	},
+})
 require("nvim-surround").setup({})
 require("ibl").setup({
 	indent = { char = "▏" },

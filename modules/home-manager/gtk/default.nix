@@ -25,8 +25,10 @@ in
         package = pkgs.bibata-cursors;
       };
       theme = {
-        package = pkgs.tokyonight-gtk-theme;
-        name = "Tokyonight-Dark";
+        #        package = pkgs.tokyonight-gtk-theme;
+        package = pkgs.adw-gtk3;
+        #name = "Tokyonight-Dark";
+        name = "adw-gtk3-dark";
       };
       iconTheme = {
         package = pkgs.papirus-icon-theme;
@@ -44,7 +46,7 @@ in
         '';
       };
     };
-    home.sessionVariables.GTK_THEME = "Tokyonight-Dark";
+    home.sessionVariables.GTK_THEME = "adw-gtk3-dark";
   };
 
 }

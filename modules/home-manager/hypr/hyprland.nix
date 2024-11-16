@@ -20,11 +20,12 @@
         "nm-applet &"
         "wl-clip-persist --clipboard both &"
         "wl-paste --watch cliphist store &"
-        "dunst &"
+        "swaync &"
         "waybar &"
         "hyprctl setcursor Bibata-Modern-Ice 24 &"
         "udiskie &"
-        "swaybg -i ~/.setup/extras/wallpapers/tokyo.png"
+        "avizo-service &"
+        "swaybg -i ~/.setup/extras/wallpapers/12-Dark.jpg"
       ];
 
       input = {
@@ -48,9 +49,9 @@
         layout = "dwindle";
         gaps_in = 5;
         gaps_out = 10;
-        border_size = 2;
-        "col.active_border" = "rgb(${config.colorScheme.palette.base06})";
-        "col.inactive_border" = "rgb(${config.colorScheme.palette.base02})";
+        border_size = 0;
+        "col.active_border" = "rgb(ffffff)";
+        "col.inactive_border" = "rgb(000000)";
         border_part_of_window = false;
         no_border_on_floating = false;
       };
@@ -155,6 +156,7 @@
         "$mainMod SHIFT, E, exit,"
         "$mainMod SHIFT, Z, exec, /home/sebastian/.setup/modules/home-manager/scripts/monitor_toggle dual"
         "$mainMod, Z, exec, /home/sebastian/.setup/modules/home-manager/scripts/monitor_toggle uw"
+        "$mainMod, T, exec, swaync -t"
 
         # switch focus
         "$mainMod, left, movefocus, l"
@@ -236,17 +238,15 @@
       # binds active in lockscreen
       bindl = [
         # laptop brigthness
-        ",XF86MonBrightnessUp, exec, brightnessctl set 5%+"
-        ",XF86MonBrightnessDown, exec, brightnessctl set 5%-"
-        "$mainMod, XF86MonBrightnessUp, exec, brightnessctl set 100%+"
-        "$mainMod, XF86MonBrightnessDown, exec, brightnessctl set 100%-"
+        ",XF86MonBrightnessUp, exec, lightctl up"
+        ",XF86MonBrightnessDown, exec, lightctl down"
       ];
 
       # binds that repeat when held
       binde = [
-        ",XF86AudioRaiseVolume,exec, pamixer -i 5"
-        ",XF86AudioLowerVolume,exec, pamixer -d 5"
-        ",XF86AudioMute,exec, pamixer -t"
+        ",XF86AudioRaiseVolume,exec, volumectl -u up"
+        ",XF86AudioLowerVolume,exec, volumectl -u down"
+        ",XF86AudioMute,exec, volumectl toggle-mute"
       ];
 
       # mouse binding
