@@ -146,7 +146,7 @@
         "$mainMod, F, fullscreen, 0"
         "$mainMod_SHIFT, F, fullscreen, 1"
         "$mainMod SHIFT, Space, togglefloating,"
-        "$mainMod, Space, exec, rofi -show drun"
+        "$mainMod, Space, exec, rofi -show drun -show-icons"
         "$mainMod ALT, L, exec, hyprlock"
         "$mainMod, Escape, exec, power-menu"
         "$mainMod, P, pseudo,"
@@ -156,7 +156,7 @@
         "$mainMod SHIFT, E, exit,"
         "$mainMod SHIFT, Z, exec, /home/sebastian/.setup/modules/home-manager/scripts/monitor_toggle dual"
         "$mainMod, Z, exec, /home/sebastian/.setup/modules/home-manager/scripts/monitor_toggle uw"
-        "$mainMod, T, exec, swaync -t"
+        "$mainMod, T, exec, swaync-client -t"
 
         # switch focus
         "$mainMod, left, movefocus, l"
