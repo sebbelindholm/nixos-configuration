@@ -30,12 +30,8 @@ window#waybar {
   font-size: 11;
 }
 
-#custom-do-not-disturb {
-  margin-left: 17px;
-  /*padding: 3px 0px 1px 0px;*/
-}
-
 #clock {
+  font-weight: bold;
   margin-left: 15px;
   margin-right: 14px;
 }
