@@ -20,6 +20,9 @@ require("transparent").setup({
 		"TelescopeResultsTitle",
 		"TelescopeResultsBorder",
 		"StatusLine",
+		"TelescopePreviewTitle",
+		"TelescopePreviewNormal",
+		"TelescopePreviewBorder",
 	},
 })
 require("nvim-surround").setup({})
