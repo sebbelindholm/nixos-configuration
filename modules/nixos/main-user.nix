@@ -34,5 +34,6 @@ in
       shell = pkgs.zsh;
     };
     environment.variables.EDITOR = "nvim";
+    services.getty.autologinUser = "sebastian";
   };
 }

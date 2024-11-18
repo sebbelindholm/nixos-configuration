@@ -31,6 +31,9 @@ in
           cat = "bat";
         };
         initExtra = ''
+          if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+            Hyprland
+          fi
           bindkey -e
           export PATH=/home/sebastian/.setup/modules/home-manager/scripts:$PATH
           eval "$(fzf --zsh)"

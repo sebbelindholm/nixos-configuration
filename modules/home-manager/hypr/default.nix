@@ -51,6 +51,7 @@ in
       XDG_CURRENT_DESKTOP = "Hyprland";
       XDG_SESSION_TYPE = "wayland";
       XDG_SESSION_DESKTOP = "Hyprland";
+      GDK_BACKEND = "wayland,x11,*";
     };
     home.file.".config/waybar/style.css".source = ./configs/waybar/style.css;
     home.file.".config/waybar/config".source = ./configs/waybar/config;
