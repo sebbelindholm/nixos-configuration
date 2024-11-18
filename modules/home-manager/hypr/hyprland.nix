@@ -25,7 +25,7 @@
         "hyprctl setcursor Bibata-Modern-Ice 24 &"
         "udiskie &"
         "avizo-service &"
-        "swaybg -i ~/.setup/extras/wallpapers/12-Dark.jpg"
+        "swaybg -i ~/.setup/extras/wallpapers/macosBlack.jpg"
       ];
 
       input = {

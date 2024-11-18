@@ -23,6 +23,7 @@ in
   config = lib.mkIf cfg.enable {
     home.packages = with pkgs; [
       hyprshot
+      ranger
       playerctl
       pavucontrol
       blueman

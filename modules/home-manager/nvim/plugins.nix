@@ -7,10 +7,14 @@
 
 {
   programs.neovim.plugins = with pkgs.vimPlugins; [
+    kanagawa-nvim
+    vscode-nvim
+    onedark-nvim
+    onedarker-nvim
+    onedarkpro-nvim
     omnisharp-extended-lsp-nvim
     render-markdown-nvim
     neo-tree-nvim
-    transparent-nvim
     telescope-fzf-native-nvim
     telescope-ui-select-nvim
     telescope-nvim
