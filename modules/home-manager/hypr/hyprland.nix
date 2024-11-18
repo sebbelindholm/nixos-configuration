@@ -8,7 +8,15 @@
   wayland.windowManager.hyprland = {
 
     enable = true;
-    #    package = inputs.hyprland.packages.${pkgs.system}.default;
+
+    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+
+    plugins = [
+      inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprbars
+      inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprexpo
+      inputs.Hyprspace.packages.${pkgs.system}.Hyprspace
+    ];
+
     settings = {
 
       # autostart
@@ -28,6 +36,25 @@
         "avizo-service &"
         "swaybg -i ~/.setup/extras/wallpapers/macosBlack.jpg"
       ];
+
+      plugin = {
+        hyprbars = {
+          bar_height = 30;
+          bar_color = "rgb(222222)";
+          col.text = "rgb(000000)";
+          bar_text_size = 12;
+          bar_text_font = "Ubuntu Bold";
+          bar_part_of_window = true;
+          bar_button_padding = 14;
+          hyprbars-button = [
+            "rgb(2E2E2E), 20, 󰖭, hyprctl dispatch killactive"
+            "rgb(2E2E2E), 20, , hyprctl dispatch fullscreen 1"
+          ];
+        };
+        overview = {
+          workspaceActiveBorder = "rgb(222222)";
+        };
+      };
 
       input = {
         kb_layout = "se";
@@ -159,6 +186,7 @@
         "$mainMod SHIFT, Z, exec, /home/sebastian/.setup/modules/home-manager/scripts/monitor_toggle dual"
         "$mainMod, Z, exec, /home/sebastian/.setup/modules/home-manager/scripts/monitor_toggle uw"
         "$mainMod, T, exec, swaync-client -t"
+        "ALT, Tab, overview:toggle, "
 
         # switch focus
         "$mainMod, left, movefocus, l"

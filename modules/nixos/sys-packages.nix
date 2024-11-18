@@ -17,7 +17,6 @@ in
   config = lib.mkIf syspkg.enable {
     environment.systemPackages = with pkgs; [
       killall
-      niri
       omnisharp-roslyn
       dotnetCorePackages.sdk_9_0
       dotnetCorePackages.sdk_8_0_3xx

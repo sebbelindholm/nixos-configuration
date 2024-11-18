@@ -18,6 +18,11 @@
       inputs.hyprland.follows = "hyprland";
     };
 
+    Hyprspace = {
+      url = "github:KZDKM/Hyprspace";
+      inputs.hyprland.follows = "hyprland";
+    };
+
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
 
     nixos-hardware.url = "github:NixOS/nixos-hardware";
