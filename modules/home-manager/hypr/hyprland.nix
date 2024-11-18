@@ -35,6 +35,7 @@
         "udiskie &"
         "avizo-service &"
         "swaybg -i ~/.setup/extras/wallpapers/macosBlack.jpg"
+        "[workspace special silent] kitty"
       ];
 
       plugin = {
@@ -187,6 +188,8 @@
         "$mainMod, Z, exec, /home/sebastian/.setup/modules/home-manager/scripts/monitor_toggle uw"
         "$mainMod, T, exec, swaync-client -t"
         "ALT, Tab, overview:toggle, "
+        "$mainMod, C, togglespecialworkspace"
+        "$mainMod SHIFT, C, movetoworkspace, special"
 
         # switch focus
         "$mainMod, left, movefocus, l"
