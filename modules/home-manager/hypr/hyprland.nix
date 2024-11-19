@@ -36,6 +36,7 @@
         "avizo-service &"
         "swaybg -i ~/.setup/extras/wallpapers/macosBlack.jpg"
         "[workspace special silent] kitty"
+        "[workspace 2 silent] vesktop"
       ];
 
       plugin = {
