@@ -19,9 +19,10 @@
     source = ./device_specific.conf;
   };
 
-  home.packages = [
-    #SOME HOME PACKAGES SPECIFIC TO THIS MACHINE
-  ];
+  home.packages =
+    with pkgs;
+    [
+    ];
 
   home.sessionVariables = {
     #SESSIONVARIABLES SPECIFIC TO THIS MACHINE
