@@ -306,6 +306,7 @@
         "pin, title:^(Picture-in-Picture)$"
         "idleinhibit focus, class:^(mpv)$"
         "idleinhibit fullscreen, class:^(google-chrome)$"
+        "idleinhibit fullscreen, class:^(Spotify)$"
         "float,class:^(org.gnome.FileRoller)$"
         "center,class:^(org.gnome.FileRoller)$"
         "size 850 500,class:^(org.gnome.FileRoller)$"
