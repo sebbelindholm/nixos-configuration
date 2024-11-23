@@ -14,7 +14,7 @@
     plugins = [
       inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprbars
       inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprexpo
-      inputs.Hyprspace.packages.${pkgs.system}.Hyprspace
+      #inputs.Hyprspace.packages.${pkgs.system}.Hyprspace
     ];
 
     settings = {
@@ -53,9 +53,9 @@
             "rgb(2E2E2E), 20, , hyprctl dispatch fullscreen 1"
           ];
         };
-        overview = {
-          workspaceActiveBorder = "rgb(222222)";
-        };
+        #overview = {
+        #  workspaceActiveBorder = "rgb(222222)";
+        #};
       };
 
       input = {
@@ -178,7 +178,7 @@
         "$mainMod SHIFT, X, exec, /home/sebastian/.setup/modules/home-manager/scripts/monitor_toggle special"
         "$mainMod, Z, exec, /home/sebastian/.setup/modules/home-manager/scripts/monitor_toggle uw"
         "$mainMod, T, exec, swaync-client -t"
-        "ALT, Tab, overview:toggle, "
+        #        "ALT, Tab, overview:toggle, "
         "$mainMod, C, togglespecialworkspace"
         "$mainMod SHIFT, C, movetoworkspace, special"
 

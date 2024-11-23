@@ -24,6 +24,9 @@
 
     "modules-right": ["tray", "group/pulseaudio", "group/time",],
 
+  "idle_inhibitor": {
+    
+  },
 
 
 	"group/battery": {
