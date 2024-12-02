@@ -15,10 +15,12 @@ in
   };
 
   config = lib.mkIf cfg.enable {
+    services.xserver.enable = true;
+    services.xserver.desktopManager.budgie.enable = true;
     xdg.portal.enable = true;
 
     programs.hyprland = {
-      enable = true;
+      enable = false;
       xwayland.enable = true;
       package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
       portalPackage =

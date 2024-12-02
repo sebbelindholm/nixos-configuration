@@ -27,7 +27,6 @@
 
   amdgpu.enable = true;
   rgb.enable = true;
-  vm-host.enable = true;
 
   virtualisation.virtualbox.host.enable = true;
   environment.systemPackages = with pkgs; [

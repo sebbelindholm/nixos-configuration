@@ -21,7 +21,7 @@
   google-chrome.enable = true;
   gtk_module.enable = true;
   starship.enable = true;
-  hypr.enable = true;
+  hypr.enable = false;
   qt.enable = true;
   wayland.enable = true;
   colors.enable = true;

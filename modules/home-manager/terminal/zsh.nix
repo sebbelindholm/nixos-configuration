@@ -32,7 +32,7 @@ in
         };
         initExtra = ''
           if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
-            Hyprland
+            echo "Hello"
           fi
           bindkey -e
           export PATH=/home/sebastian/.setup/modules/home-manager/scripts:$PATH
