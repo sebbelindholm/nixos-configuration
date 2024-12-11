@@ -4,28 +4,17 @@
   pkgs,
   ...
 }:
-
-let
-  cfg = config.bluetooth;
-in
 {
-  options.bluetooth = {
-    enable = lib.mkEnableOption "enable bluetooth module";
+  hardware = {
+    bluetooth = {
+      enable = true;
+      powerOnBoot = true;
+    };
   };
 
-  config = lib.mkIf cfg.enable {
-    hardware = {
-      bluetooth = {
-        enable = true;
-        powerOnBoot = true;
-      };
-    };
-
-    services = {
-      blueman = {
-        enable = false;
-      };
+  services = {
+    blueman = {
+      enable = false;
     };
   };
 }
-

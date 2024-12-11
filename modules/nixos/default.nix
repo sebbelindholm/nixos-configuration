@@ -19,9 +19,6 @@
     ./font.nix
     ./std-nix.nix
     ./bluetooth.nix
-    ./amdgpu.nix
-    ./nvidia.nix
-    ./igpu-intel.nix
     ./steam.nix
     ./laptop.nix
     ./rgb.nix

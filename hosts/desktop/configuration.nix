@@ -7,11 +7,11 @@
 }:
 
 {
-
   networking.hostName = "nixos-desktop";
 
   imports = [
     ./hardware-configuration.nix
+    ../../modules/nixos/amdgpu.nix
     ../../modules/nixos
     ../common.nix
     inputs.home-manager.nixosModules.default
@@ -25,10 +25,6 @@
     }
   ];
 
-  amdgpu.enable = true;
-  rgb.enable = true;
-
-  virtualisation.virtualbox.host.enable = true;
   environment.systemPackages = with pkgs; [
     #SOME PROGRAM SPECIFIC TO THIS MACHINE
   ];

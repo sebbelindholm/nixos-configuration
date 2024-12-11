@@ -7,13 +7,15 @@
 }:
 
 {
-
   networking.hostName = "nixos-laptop";
 
   imports = [
     ./hardware-configuration.nix
     ../../modules/nixos
     ../common.nix
+    ../../modules/nixos/nvidia.nix
+    ../../modules/nixos/igpu-intel.nix
+    ../../modules/nixos/laptop.nix
 
     inputs.razerdaemon.nixosModules.default
     inputs.home-manager.nixosModules.default
@@ -26,10 +28,6 @@
       };
     }
   ];
-
-  laptop.enable = true;
-  nvidia.enable = true;
-  igpu-intel.enable = true;
 
   services.razer-laptop-control.enable = true;
 
