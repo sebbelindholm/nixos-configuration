@@ -5,10 +5,10 @@
   ...
 }:
 {
-  hardware.pulseaudio.enable = lib.mkForce false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
-    enable = lib.mkForce true;
+    enable = true;
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;

@@ -7,6 +7,7 @@
 {
   home.packages = with pkgs; [
     octaveFull
+    ghostty
     vscode.fhs
     prismlauncher
     unityhub

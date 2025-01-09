@@ -10,6 +10,7 @@
     ./home-packages.nix
     ./terminal/kitty.nix
     ./terminal/git.nix
+    ./terminal/ghostty.nix
     ./terminal/zsh.nix
     ./terminal/starship.nix
     ./gnome

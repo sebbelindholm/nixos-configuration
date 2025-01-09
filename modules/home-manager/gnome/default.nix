@@ -10,6 +10,6 @@
   ];
   dconf.enable = true;
   home.packages = with pkgs; [
-    gnome-extension-manager
+    #gnome-extension-manager
   ];
 }
