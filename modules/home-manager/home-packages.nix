@@ -10,9 +10,7 @@
     vscode.fhs
     prismlauncher
     unityhub
-    zathura
     kitty
-    rpi-imager
     vesktop
     lazygit
     neofetch
