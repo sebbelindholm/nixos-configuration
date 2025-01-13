@@ -12,6 +12,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules/nixos/amdgpu.nix
+    ../../modules/nixos/ai.nix
     ../../modules/nixos
     ../common.nix
     inputs.home-manager.nixosModules.default

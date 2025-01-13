@@ -17,7 +17,7 @@
     ./nvim
     ./browser
     ./gtk
-    ./hypr
+    #    ./hypr
     ./qt
     ./wayland
     ./nix-colors

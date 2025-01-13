@@ -4,9 +4,20 @@
   pkgs,
   ...
 }:
-
+let
+  llama-copilot-nvim = pkgs.vimUtils.buildVimPlugin {
+    name = "llama-copilot-nvim";
+    src = pkgs.fetchFromGitHub {
+      owner = "Faywyn";
+      repo = "llama-copilot.nvim";
+      rev = "8cd0a212868ccd0b24b70662d6facd5ccb165c2d";
+      hash = "sha256-hQ2IFFAhh+LtvzRy9gyg5eP/5XCneh4uW7jE7w6hz5E";
+    };
+  };
+in
 {
   programs.neovim.plugins = with pkgs.vimPlugins; [
+    llama-copilot-nvim
     kanagawa-nvim
     vscode-nvim
     onedark-nvim

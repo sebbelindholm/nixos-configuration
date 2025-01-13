@@ -30,6 +30,9 @@ vim.keymap.set("n", "<leader>dw", "<C-w>c", { desc = "Delete window (keep buffer
 
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
 
+vim.keymap.set("n", "<leader>lc", ":LlamaCopilotComplet<CR>", { silent = true, desc = "Llama copilot complete" })
+vim.keymap.set("n", "<leader>la", ":LlamaCopilotCompletCR>", { silent = true, desc = "Llama copilot accept" })
+
 vim.keymap.set("n", "<C-h>", "<C-W>h")
 vim.keymap.set("n", "<C-j>", "<C-W>j")
 vim.keymap.set("n", "<C-k>", "<C-W>k")
@@ -60,6 +63,7 @@ vim.cmd([[
   highlight NonText ctermbg=none
 ]])
 
+require("plugins.ollama")
 require("plugins.neotree")
 require("plugins.telescope")
 require("plugins.small-plugins")
