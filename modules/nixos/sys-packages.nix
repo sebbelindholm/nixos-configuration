@@ -5,6 +5,13 @@
   ...
 }:
 {
+  programs.nh = {
+    enable = true;
+    clean.enable = true;
+    clean.extraArgs = "--keep-since 4d --keep 3";
+    flake = "/home/sebastian/.setup";
+  };
+
   environment.systemPackages = with pkgs; [
     qmk
     zulu8
