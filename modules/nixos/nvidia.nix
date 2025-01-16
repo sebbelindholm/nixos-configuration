@@ -22,7 +22,7 @@
     open = false;
     nvidiaSettings = true;
 
-    package = config.boot.kernelPackages.nvidiaPackages.production;
+    package = config.boot.kernelPackages.nvidiaPackages.latest;
 
     prime = {
       intelBusId = "PCI:00:02:0";
