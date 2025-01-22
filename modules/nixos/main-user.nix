@@ -14,9 +14,11 @@
       "networkmanager"
       "wheel"
       "vboxusers"
+      "minecraft"
     ];
     shell = pkgs.zsh;
   };
+  users.groups.minecraft = { };
   environment.variables.EDITOR = "nvim";
   #services.getty.autologinUser = "sebastian";
 }

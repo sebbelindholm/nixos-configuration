@@ -10,10 +10,12 @@
   networking.hostName = "nixos-desktop";
 
   imports = [
+    #../../modules/nixos/minecraft-server.nix
     ./hardware-configuration.nix
     ../../modules/nixos/amdgpu.nix
-    ../../modules/nixos/ai.nix
+    #    ../../modules/nixos/ai.nix
     ../../modules/nixos
+    #    ../../modules/containers
     ../common.nix
     inputs.home-manager.nixosModules.default
     {
