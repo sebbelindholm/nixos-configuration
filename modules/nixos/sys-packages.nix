@@ -14,10 +14,8 @@
 
   environment.systemPackages = with pkgs; [
     jetbrains.idea-community-bin
-    lmstudio
     zulu
     zulu17
-    zulu23
     qmk
     zulu8
     xclip
