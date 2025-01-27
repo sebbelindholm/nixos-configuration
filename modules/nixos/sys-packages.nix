@@ -13,6 +13,9 @@
   };
 
   environment.systemPackages = with pkgs; [
+    jetbrains.idea-community-bin
+    zulu
+    zulu17
     qmk
     zulu8
     xclip

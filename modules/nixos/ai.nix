@@ -15,14 +15,15 @@
   services.ollama = {
     enable = true;
     acceleration = "rocm";
+    rocmOverrideGfx = "11.0.0";
     loadModels = [
       "llama3.1"
       "phi4"
     ];
     environmentVariables = {
-      HCC_AMDGPU_TARGET = "gfx1102"; # used to be necessary, but doesn't seem to anymore
+      HCC_AMDGPU_TARGET = "gfx1100"; # used to be necessary, but doesn't seem to anymore
+      HSA_OVERRIDE_GFX_VERSION = "11.0.0";
       OLLAMA_KEEP_ALIVE = "30";
     };
-    rocmOverrideGfx = "11.0.0";
   };
 }
