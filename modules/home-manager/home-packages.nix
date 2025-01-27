@@ -6,6 +6,7 @@
 }:
 {
   home.packages = with pkgs; [
+    logisim-evolution
     octaveFull
     ghostty
     vscode.fhs
