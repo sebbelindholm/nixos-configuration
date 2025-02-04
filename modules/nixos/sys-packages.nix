@@ -13,6 +13,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    valgrind
     jetbrains.idea-community-bin
     zulu
     zulu17

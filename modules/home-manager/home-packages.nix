@@ -6,6 +6,9 @@
 }:
 {
   home.packages = with pkgs; [
+    wine
+    winetricks
+    bottles
     logisim-evolution
     octaveFull
     ghostty
@@ -19,5 +22,7 @@
     bitwarden-desktop
     spotify
     gnome-tweaks
+    lutris
   ];
+
 }

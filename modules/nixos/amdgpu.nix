@@ -5,21 +5,23 @@
   ...
 }:
 {
-  environment.systemPackages = with pkgs; [
-    lact
-  ];
-
-  #systemd.services.lact = {
-  #    description = "AMDGPU Control Daemon";
-  #after = [ "multi-user.target" ];
-  #wantedBy = [ "multi-user.target" ];
-  #serviceConfig = {
-  #  ExecStart = "${pkgs.lact}/bin/lact daemon";
-  #};
-  #enable = true;
-  #};
   boot.initrd.kernelModules = [ "amdgpu" ];
   services.xserver.videoDrivers = [ "amdgpu" ];
+
+  #systemd.tmpfiles.rules =
+  #  let
+  #    rocmEnv = pkgs.symlinkJoin {
+  #      name = "rocm-combined";
+  #      paths = with pkgs.rocmPackages; [
+  #        rocblas
+  #        hipblas
+  #        clr
+  #      ];
+  #    };
+  #  in
+  #  [
+  #    "L+    /opt/rocm   -    -    -     -    ${rocmEnv}"
+  #  ];
 
   #systemd.tmpfiles.rules = [
   #  "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"
@@ -29,13 +31,11 @@
   #  rocmPackages.clr.icd
   #];
 
-  #hardware.amdgpu.opencl.enable = true;
+  #hardware.amdgpu.opencl.enable = false;
 
   hardware.graphics = {
     enable = true;
   };
-
-  #hardware.amdgpu.opencl.enable = true;
 
   hardware.amdgpu.amdvlk.support32Bit.enable = true;
 
