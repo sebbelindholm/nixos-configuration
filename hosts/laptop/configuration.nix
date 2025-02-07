@@ -16,6 +16,7 @@
     ../../modules/nixos/nvidia.nix
     ../../modules/nixos/igpu-intel.nix
     ../../modules/nixos/laptop.nix
+    #    ../../modules/nixos/hibernate.nix
 
     inputs.razerdaemon.nixosModules.default
     inputs.home-manager.nixosModules.default
