@@ -13,8 +13,11 @@
   };
 
   environment.systemPackages = with pkgs; [
+    libspnav
+    spacenavd
+    spacenav-cube-example
     valgrind
-    jetbrains.idea-community-bin
+    #jetbrains.idea-community-bin
     zulu
     zulu17
     qmk
@@ -27,7 +30,7 @@
     fzf
     wget
     libva-utils
-    nodePackages_latest.typescript-language-server
+    #nodePackages_latest.typescript-language-server
     vscode-langservers-extracted
     matlab-language-server
     texlab
@@ -62,7 +65,7 @@
     gnumake
     cmake
     sumneko-lua-language-server
-    javascript-typescript-langserver
+    #javascript-typescript-langserver
     typescript
     rust-analyzer
     pyright

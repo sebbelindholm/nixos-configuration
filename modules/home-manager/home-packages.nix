@@ -6,6 +6,8 @@
 }:
 {
   home.packages = with pkgs; [
+    prusa-slicer
+    freecad-wayland
     wine
     winetricks
     bottles

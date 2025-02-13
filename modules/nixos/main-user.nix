@@ -9,16 +9,14 @@
   users.users.sebastian = {
     isNormalUser = true;
     initialPassword = "12345";
-    description = "main user";
+    description = "sebastian";
     extraGroups = [
       "networkmanager"
       "wheel"
-      "vboxusers"
-      "minecraft"
+      #"vboxusers"
+      #"vboxsf"
     ];
     shell = pkgs.zsh;
   };
-  users.groups.minecraft = { };
   environment.variables.EDITOR = "nvim";
-  #services.getty.autologinUser = "sebastian";
 }

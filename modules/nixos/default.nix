@@ -8,6 +8,7 @@
 {
   imports = [
     ./sys-packages.nix
+    ./virtualization.nix
     ./main-user.nix
     ./vars.nix
     ./ssh.nix
